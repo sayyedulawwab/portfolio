@@ -1,13 +1,355 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*------------------------------------*\
+		# BASE STYLES
+\*------------------------------------*/
+
+/* import Fonts */
+@font-face {
+  font-family: 'FiraCode';
+  src: url('./assets/fonts/FiraCode-Medium.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FiraCode-Bold';
+  src: url('./assets/fonts/FiraCode-Bold.ttf');
+  font-display: swap;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* reset some style */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* smooth all transition */
+
+body * {
+  transition: all 0.3s;
+}
+
+/* Typography */
+
+body {
+  font-family: 'FiraCode', sans-serif;
+  font-size: 0.9rem;
+  line-height: 2rem;
+  scroll-behavior: smooth;
+}
+
+/*------------------------------------*\
+	# LAYOUT
+\*------------------------------------*/
+/* navbar */
+nav {
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 5px 10px 1px rgba(240, 240, 240, 1);
+}
+nav div {
+  display: flex;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
+  color: #000000;
+}
+nav ul a:hover,
+nav ul a:focus {
+  border-bottom: 1px solid #000000;
+}
+
+.menu-list {
+  display: none;
+}
+.responsive {
+  display: block;
+}
+nav ul li {
+  padding: 0 1rem;
+  list-style: none;
+}
+
+/* hamburger menu */
+
+.menu-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  width: 1.5rem;
+  height: 0.3rem;
+  background: #000;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  position: absolute;
+  width: 1.5rem;
+  height: 0.3rem;
+  background: #000;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  transform: translateY(-0.5rem);
+}
+.menu-btn__burger::after {
+  transform: translateY(0.5rem);
+}
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-1rem);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(1rem, -1rem);
+}
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(1rem, 1rem);
+}
+
+/* Main content */
+.main {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5rem 0;
+}
+
+/* Intro section */
+.intro-section {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.profile-pic {
+  width: 30%;
+  border-radius: 50%;
+}
+.call-to-action {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+  border: 1px solid;
+  border-radius: 5rem;
+  color: #000000;
+}
+
+.call-to-action:hover,
+.call-to-action:focus {
+  background-color: #0099ff;
+  color: #ffffff;
+}
+
+.icons {
+  width: 1.5rem;
+  margin: 0 0.5rem 0 0;
+}
+
+.social-icons:hover {
+  width: 1.8rem;
+}
+
+.skills {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.skill-col {
+  margin: 1rem 3rem 0 0;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+}
+
+.project-card {
+  box-shadow: 1px 1px 10px 10px #e6e6e6;
+  text-align: center;
+  width: 90%;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+.project-card img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  object-position: top;
+}
+.project-card a {
+  color: #0099ff;
+}
+.project-card a:hover {
+  color: #0028db;
+  text-decoration: underline;
+}
+.project-techlist-header,
+.project-techlist {
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.project-techlist-header {
+  font-weight: bold;
+}
+.project-techlist {
+  list-style: none;
+}
+.project-techlist li {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 0.1rem 0.9rem;
+  border-radius: 20px;
+  background-color: #d3dfdf;
+}
+/* Footer */
+
+footer {
+  background-color: #f0f0f0;
+  color: #000000;
+  padding: 2rem;
+}
+footer a {
+  color: #000000;
+}
+footer .social-icons {
+  transform: translateY(10px);
+}
+
+footer section {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+/*------------------------------------*\
+		# MEDIA QUERIES
+\*------------------------------------*/
+/* Tablet (screen size >=768px) */
+@media only screen and (min-width: 768px) {
+  /*------------------------------------*\
+		# BASE STYLES
+\*------------------------------------*/
+  /* html,
+  body {
+    font-size: 0.9rem;
+  } */
+  /*------------------------------------*\
+	#  LAYOUT
+\*------------------------------------*/
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .menu-btn {
+    display: none;
+  }
+  .menu-list,
+  .responsive {
+    display: flex;
+  }
+  /* main {
+    display: flex;
+  } */
+
+  main section {
+    padding: 0 1rem;
+    text-align: left;
+  }
+  .projects {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .project-card {
+    width: 40%;
+  }
+  .intro-section {
+    /* text-align: left; */
+    padding: 3rem 0;
+  }
+
+  /* .call-to-action {
+    display: none;
+  } */
+}
+/* Laptop (screen size>=1024px) */
+@media only screen and (min-width: 1024px) {
+  /*------------------------------------*\
+		# BASE STYLES
+\*------------------------------------*/
+  html,
+  body {
+    font-size: 1rem;
+  }
+  main {
+    padding: 5rem 0;
+  }
+}
+/* Laptop L (screen size>=1440px) */
+@media only screen and (min-width: 1440px) {
+  /*------------------------------------*\
+		# BASE STYLES
+\*------------------------------------*/
+  html,
+  body {
+    font-size: 1.2rem;
+  }
+  .project-card {
+    width: 50%;
+  }
+}
+/* 4K (screen size>=2560px) */
+@media only screen and (min-width: 2560px) {
+  /*------------------------------------*\
+		# BASE STYLES
+	\*------------------------------------*/
+  html,
+  body {
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+  /*------------------------------------*\
+		# LAYOUT
+	\*------------------------------------*/
+  main {
+    padding: 8rem 0;
+  }
+  .social-icons {
+    width: 3rem;
+  }
+
+  .social-icons:hover {
+    width: 3.5rem;
+  }
 }
