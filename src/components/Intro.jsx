@@ -11,9 +11,6 @@ function Intro() {
       </p>
       <h1>Muhammad Sayyedul Awwab</h1>
       <p>
-        <strong>Frontend Developer</strong>
-      </p>
-      <p>
         <a
           href="https://github.com/sayyedulawwab"
           target="_blank"
@@ -28,9 +25,6 @@ function Intro() {
         >
           <img className="icons" src={linkedin_logo} alt="LinkedIn" />
         </a>
-        <br />
-        Learning web development <br />
-        Want to become a Full-Stack Developer
       </p>
 
       <a className="call-to-action" href="#projects">

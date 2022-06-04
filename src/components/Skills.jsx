@@ -8,7 +8,7 @@ function Skills() {
       <div className="skills">
         <div className="skill-col">
           <p>
-            <strong>Language</strong>
+            <strong>Languages</strong>
           </p>
           <ul className="skill-list">
             {skills.languages.map(skill => {
@@ -36,6 +36,7 @@ function Skills() {
             })}
           </ul>
         </div>
+
         <div className="skill-col">
           <p>
             <strong>Tools</strong>

@@ -12,6 +12,14 @@ const skills = {
       title: 'JavaScript',
       logo: require('./assets/images/logo-javascript.svg').default,
     },
+    {
+      title: 'Python',
+      logo: require('./assets/images/logo-python.svg').default,
+    },
+    {
+      title: 'MySQL',
+      logo: require('./assets/images/logo-mysql.svg').default,
+    },
   ],
   frameworks: [
     {
