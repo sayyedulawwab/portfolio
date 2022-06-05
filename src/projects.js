@@ -3,7 +3,7 @@ const projects = [
     title: 'Covid 19 Tracker',
     image:
       'https://raw.githubusercontent.com/sayyedulawwab/covid-19-tracker/main/covid-19-tracker.png',
-    liveLink: 'covid-19-tracker-7b7422.netlify.app/',
+    liveLink: 'https://covid-19-tracker-7b7422.netlify.app/',
     githubLink: 'https://github.com/sayyedulawwab/covid-19-tracker',
     built_with: [
       'React',
@@ -15,7 +15,7 @@ const projects = [
     title: 'Netflix Clone',
     image:
       'https://raw.githubusercontent.com/sayyedulawwab/netflix-front-clone/main/netflix-front-clone.png',
-    liveLink: 'netflix-front-clone.web.app/',
+    liveLink: 'https://netflix-front-clone.web.app/',
     githubLink: 'https://github.com/sayyedulawwab/netflix-front-clone',
     built_with: [
       'React',
@@ -27,7 +27,7 @@ const projects = [
     title: 'Weatherio',
     image:
       'https://raw.githubusercontent.com/sayyedulawwab/weatherio/main/weatherio.png',
-    liveLink: 'weatherio-76a5a8.netlify.app/',
+    liveLink: 'https://weatherio-76a5a8.netlify.app/',
     githubLink: 'https://github.com/sayyedulawwab/weatherio',
     built_with: ['React', 'OpenWeather API', 'Deployed using Netlify'],
   },
