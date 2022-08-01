@@ -30,6 +30,10 @@ const skills = {
       title: 'Tailwind',
       logo: require('./assets/images/logo-tailwind.svg').default,
     },
+    {
+      title: 'NodeJS',
+      logo: require('./assets/images/logo-nodejs.svg').default,
+    },
   ],
   tools: [
     {

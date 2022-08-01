@@ -17,13 +17,15 @@ function Projects() {
               </a>
               <strong>{project.title}</strong>
               <br />
-              <a
-                href={project.liveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live
-              </a>{' '}
+              {project.liveLink && (
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live
+                </a>
+              )}{' '}
               <a
                 href={project.githubLink}
                 target="_blank"

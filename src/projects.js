@@ -1,5 +1,13 @@
 const projects = [
   {
+    title: 'MERN Shop (Ongoing)',
+    image:
+      'https://images.pexels.com/photos/4439444/pexels-photo-4439444.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    liveLink: '',
+    githubLink: 'https://github.com/sayyedulawwab/mern-shop',
+    built_with: ['React', 'Node', 'Express', 'MongoDB'],
+  },
+  {
     title: 'Covid 19 Tracker',
     image:
       'https://raw.githubusercontent.com/sayyedulawwab/covid-19-tracker/main/covid-19-tracker.png',
