@@ -1,6 +1,6 @@
 const projects = [
   {
-    title: 'MERN Shop (Ongoing)',
+    title: 'MERN Shop',
     image:
       'https://images.pexels.com/photos/4439444/pexels-photo-4439444.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     liveLink: '',
