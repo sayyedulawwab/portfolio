@@ -13,7 +13,11 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="icons" src={linkedin_logo} alt="LinkedIn" />
+            <img
+              className="icons social-icons"
+              src={linkedin_logo}
+              alt="LinkedIn"
+            />
           </a>
         </div>
         <div>
@@ -23,7 +27,11 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="icons" src={envelope_logo} alt="Email" />
+            <img
+              className="icons social-icons"
+              src={envelope_logo}
+              alt="Email"
+            />
           </a>
         </div>
       </section>

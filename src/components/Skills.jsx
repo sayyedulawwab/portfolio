@@ -23,7 +23,7 @@ function Skills() {
         </div>
         <div className="skill-col">
           <p>
-            <strong>Frameworks</strong>
+            <strong>Frameworks, Platforms & Libraries</strong>
           </p>
           <ul className="skill-list">
             {skills.frameworks.map(skill => {

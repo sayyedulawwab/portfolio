@@ -25,21 +25,16 @@
 
 a {
   text-decoration: none;
-}
-
-/* smooth all transition */
-
-body * {
-  transition: all 0.3s;
+  color: #000000;
 }
 
 /* Typography */
 
+html,
 body {
   font-family: 'FiraCode', sans-serif;
-  font-size: 0.9rem;
-  line-height: 2rem;
   scroll-behavior: smooth;
+  transition: all 0.3s;
 }
 
 /*------------------------------------*\
@@ -59,13 +54,10 @@ nav div {
   display: flex;
   justify-content: space-between;
 }
-nav a {
-  text-decoration: none;
-  color: #000000;
-}
+
 nav ul a:hover,
 nav ul a:focus {
-  border-bottom: 1px solid #000000;
+  border-bottom: 2px solid #0099ff;
 }
 
 .menu-list {
@@ -128,40 +120,28 @@ nav ul li {
 }
 
 /* Main content */
-.main {
-  width: 80%;
+main {
+  width: 60%;
   margin: 0 auto;
   padding: 5rem 0;
 }
-
+main section {
+  padding-top: 4rem;
+}
 /* Intro section */
-.intro-section {
-  text-align: center;
-  width: 80%;
-  margin: 0 auto;
-}
-.profile-pic {
-  width: 30%;
-  border-radius: 50%;
-}
-.call-to-action {
-  display: inline-block;
-  margin: 0;
-  padding: 0 1rem;
-  border: 1px solid;
-  border-radius: 5rem;
-  color: #000000;
-}
 
-.call-to-action:hover,
-.call-to-action:focus {
-  background-color: #0099ff;
-  color: #ffffff;
+.profile-pic {
+  max-width: 170px;
+  border-radius: 50%;
 }
 
 .icons {
   width: 1.5rem;
   margin: 0 0.5rem 0 0;
+}
+
+.intro-section {
+  text-align: center;
 }
 
 .intro-section .icons {
@@ -174,23 +154,27 @@ nav ul li {
 
 .skills {
   display: flex;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 .skill-col {
-  margin: 1rem 3rem 0 0;
+  padding: 1rem 3rem 0 0;
 }
 
 .skill {
   display: flex;
   align-items: center;
+  padding: 0.2rem 0;
+}
+.projects {
+  display: grid;
+  gap: 1.5rem;
 }
 
 .project-card {
-  box-shadow: 1px 1px 10px 10px #e6e6e6;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   text-align: center;
-  width: 90%;
   padding: 1rem;
-  margin: 1rem;
   border-radius: 5px;
 }
 
@@ -259,16 +243,6 @@ footer section {
 \*------------------------------------*/
 /* Tablet (screen size >=768px) */
 @media only screen and (min-width: 768px) {
-  /*------------------------------------*\
-		# BASE STYLES
-\*------------------------------------*/
-  /* html,
-  body {
-    font-size: 0.9rem;
-  } */
-  /*------------------------------------*\
-	#  LAYOUT
-\*------------------------------------*/
   nav {
     display: flex;
     justify-content: space-evenly;
@@ -280,44 +254,24 @@ footer section {
   .responsive {
     display: flex;
   }
-  /* main {
-    display: flex;
-  } */
 
-  main section {
-    padding: 0 1rem;
-    text-align: left;
-  }
   .projects {
-    display: flex;
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
     padding: 1rem 0;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  .project-card {
-    width: 40%;
-  }
-  .intro-section {
-    /* text-align: left; */
-    padding: 3rem 0;
   }
 
-  /* .call-to-action {
-    display: none;
-  } */
+  .intro-section {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: center;
+  }
 }
 /* Laptop (screen size>=1024px) */
 @media only screen and (min-width: 1024px) {
-  /*------------------------------------*\
-		# BASE STYLES
-\*------------------------------------*/
-  html,
-  body {
-    font-size: 1rem;
-  }
-  main {
-    padding: 5rem 0;
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 /* Laptop L (screen size>=1440px) */
@@ -346,9 +300,7 @@ footer section {
   /*------------------------------------*\
 		# LAYOUT
 	\*------------------------------------*/
-  main {
-    padding: 8rem 0;
-  }
+
   .social-icons {
     width: 3rem;
   }
