@@ -131,7 +131,7 @@ main section {
 /* Intro section */
 
 .profile-pic {
-  max-width: 170px;
+  width: 15rem;
   border-radius: 50%;
 }
 
@@ -197,7 +197,7 @@ main section {
 .project-techlist-header,
 .project-techlist {
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .project-techlist-header {
@@ -210,7 +210,7 @@ main section {
   display: inline-block;
   margin: 0.5rem 0.5rem 0 0;
   padding: 0.1rem 0.9rem;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   background-color: #d3dfdf;
 }
 /* Footer */
@@ -262,13 +262,16 @@ footer section {
 
   .intro-section {
     display: flex;
-    justify-content: space-between;
+    gap: 5rem;
     text-align: left;
     align-items: center;
   }
 }
 /* Laptop (screen size>=1024px) */
 @media only screen and (min-width: 1024px) {
+  .intro-section {
+    gap: 10rem;
+  }
   .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -283,9 +286,6 @@ footer section {
   body {
     font-size: 1.2rem;
   }
-  .project-card {
-    width: 50%;
-  }
 }
 /* 4K (screen size>=2560px) */
 @media only screen and (min-width: 2560px) {
@@ -294,8 +294,7 @@ footer section {
 	\*------------------------------------*/
   html,
   body {
-    font-size: 1.6rem;
-    line-height: 3rem;
+    font-size: 1.4rem;
   }
   /*------------------------------------*\
 		# LAYOUT
