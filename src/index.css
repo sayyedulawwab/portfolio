@@ -296,15 +296,4 @@ footer section {
   body {
     font-size: 1.4rem;
   }
-  /*------------------------------------*\
-		# LAYOUT
-	\*------------------------------------*/
-
-  .social-icons {
-    width: 3rem;
-  }
-
-  .social-icons:hover {
-    width: 3.5rem;
-  }
 }
