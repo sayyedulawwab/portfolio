@@ -28,10 +28,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_29wpt6n',
-        'template_gfshrv7',
+        import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+        import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
         form.current,
-        'EotImljlWTADgFk_L'
+        import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(
         result => {
