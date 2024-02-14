@@ -1,0 +1,39 @@
+---
+import { info } from "../data/info";
+import Icon from "./Icon.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="py-10 bg-slate-200">
+  <section class="flex justify-evenly text-center">
+    <div class="flex flex-col items-center">
+      <p>Find me on</p>
+
+      <a
+        href={info.socialMedia.linkedin.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon src={info.socialMedia.linkedin.logo} alt="LinkedIn" />
+      </a>
+    </div>
+    <div class="flex flex-col items-center">
+      <p>Mail me at</p>
+      <a
+        href={info.socialMedia.email.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon src={info.socialMedia.email.logo} alt="Email" />
+      </a>
+    </div>
+  </section>
+
+  <p class="text-center">
+    &copy; {currentYear} All rights reserved | Made by{" "}
+    <a href="/">
+      <strong>Muhammad Sayyedul Awwab</strong>
+    </a>
+  </p>
+</footer>

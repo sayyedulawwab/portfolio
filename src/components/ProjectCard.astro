@@ -1,0 +1,49 @@
+---
+const { project } = Astro.props;
+---
+
+<div
+  class="rounded shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] min-h-max p-3"
+>
+  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+    <img
+      src={project.thumbnail}
+      alt={project.title}
+      class="w-full object-cover object-top h-40"
+    />
+  </a>
+  <strong>{project.title}</strong>
+  <br />
+  {
+    project.liveUrl && (
+      <a
+        href={project.liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sky-600 hover:text-sky-800 hover:underline"
+      >
+        Live
+      </a>
+    )
+  }{" "}
+  <a
+    href={project.githubUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="text-sky-600 hover:text-sky-800 hover:underline"
+  >
+    GitHub
+  </a>
+  {project.built_with && <p class="text-sm font-semibold">Bulit with:</p>}
+  <ul class="flex text-sm">
+    {
+      project.built_with?.map((technology: unknown) => {
+        return (
+          <li class="bg-slate-300 rounded-[1.25rem] mt-2 mr-2 px-3 py-1 font-semibold">
+            {technology}
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>

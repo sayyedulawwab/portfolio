@@ -1,0 +1,24 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+const { title, author, description } = Astro.props;
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content={author} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <main class="w-4/5 mx-auto text-lg">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

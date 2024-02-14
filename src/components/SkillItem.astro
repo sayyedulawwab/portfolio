@@ -1,0 +1,10 @@
+---
+const { skill } = Astro.props;
+
+import Icon from "./Icon.astro";
+---
+
+<li class="flex items-center">
+  <Icon src={skill.logo} alt={skill.title} />
+  {skill.title}
+</li>

@@ -1,0 +1,32 @@
+---
+import { info } from "../data/info";
+
+import Icon from "./Icon.astro";
+---
+
+<section id="hero" class="min-h-80 flex items-center">
+  <!-- <img src="/assets/images/propic.png" alt="profile" /> -->
+  <div>
+    <p>
+      <strong>Hi 👋 I'm</strong>
+    </p>
+    <h1 class="text-2xl font-bold">{info.name}</h1>
+    <p>{info.role}</p>
+    <p class="flex">
+      <a
+        href={info.socialMedia.github.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon src={info.socialMedia.github.logo} alt="GitHub" />
+      </a>
+      <a
+        href={info.socialMedia.linkedin.url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon src={info.socialMedia.linkedin.logo} alt="LinkedIn" />
+      </a>
+    </p>
+  </div>
+</section>
