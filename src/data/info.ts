@@ -66,24 +66,24 @@ export const info = {
         title: 'Python',
         logo: '/assets/images/logo-python.svg',
       },
-      {
-        title: 'HTML',
-        logo: '/assets/images/logo-html.svg',
-      },
-      {
-        title: 'CSS',
-        logo: '/assets/images/logo-css.svg',
-      },
+      // {
+      //   title: 'HTML',
+      //   logo: '/assets/images/logo-html.svg',
+      // },
+      // {
+      //   title: 'CSS',
+      //   logo: '/assets/images/logo-css.svg',
+      // },
     ],
     frameworks: [
       {
         title: 'ASP.NET Core',
         logo: '/assets/images/logo-dotnetcore.svg',
       },
-      {
-        title: 'NodeJS',
-        logo: '/assets/images/logo-nodejs.svg',
-      },
+      // {
+      //   title: 'NodeJS',
+      //   logo: '/assets/images/logo-nodejs.svg',
+      // },
       {
         title: 'React',
         logo: '/assets/images/logo-react.svg',
