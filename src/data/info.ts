@@ -3,13 +3,7 @@ export const info = {
   name: 'Muhammad Sayyedul Awwab',
   role: 'Software Engineer',
   about: `
-    Driven Junior Software Engineer with 1.5 years of hands-on experience at Bdjobs, contributing to the migration of legacy systems to cutting-edge technologies. Played a pivotal role in the successful migration of the Job Posting system to ASP.NET Core Web API using Layered Architecture and Clean Architecture, playing a pivotal role in developing the backend within a collaborative team environment.    
-    
-    Currently immersed in learning clean architecture, domain-driven design, CQRS, etc.  
-    
-    Eager to excel in the software engineering track, my career ambitions include evolving into a seasoned software architect. Passionate about staying at the forefront of technology trends, I'm dedicated to making impactful contributions to the field.
-    
-    Whether you're seeking a skilled professional for software engineering services or looking to enhance your team with someone committed to continuous learning and innovation, let's connect. I'm excited to explore how my expertise aligns with your unique needs and contribute to the success of your projects.
+    Driven Software Engineer with ${parseFloat(((new Date().getTime() - new Date('2022-09-07').getTime()) / (1000 * 60 * 60 * 24 * 365.25)).toFixed(1))} years of hands-on experience at Bdjobs, contributing to the migration of legacy systems to cutting-edge technologies. Played a pivotal role in the successful migration of the Job Posting system to ASP.NET Core Web API playing a pivotal role in developing the backend within a collaborative team environment. Eager to excel in the software engineering track, my career ambitions include evolving into a seasoned software architect. Passionate about staying at the forefront of technology trends, I'm dedicated to making impactful contributions to the field. Whether you're seeking a skilled professional for software engineering services or looking to enhance your team with someone committed to continuous learning and innovation, let's connect. I'm excited to explore how my expertise aligns with your unique needs and contribute to the success of your projects.
     `,
 
   experience: [
@@ -62,10 +56,10 @@ export const info = {
         title: 'JavaScript',
         logo: '/assets/images/logo-javascript.svg',
       },
-      {
-        title: 'Python',
-        logo: '/assets/images/logo-python.svg',
-      },
+      // {
+      //   title: 'Python',
+      //   logo: '/assets/images/logo-python.svg',
+      // },
       // {
       //   title: 'HTML',
       //   logo: '/assets/images/logo-html.svg',
@@ -116,12 +110,32 @@ export const info = {
   projects: [
     {
       title: 'Ecommerce API',
+      description:
+        'Ecommerce API for managing products, categories, user authentication, reviews, and orders seamlessly within an ecommerce platform. Built with ASP.NET Core Web API and employing clean architecture principles, Domain Driven Design (DDD) and Mediator pattern for CQRS implementation.',
       thumbnail:
         'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       liveUrl: '',
       githubUrl:
         'https://github.com/sayyedulawwab/EcommerceApp/tree/clean-architecture-v1',
-      built_with: ['ASP.NET Core'],
+      built_with: [
+        'ASP.NET Core Web API',
+        'Clean Architecture',
+        'Domain Driven Design (DDD)',
+        'CQRS',
+        'Repository Pattern',
+      ],
+    },
+    {
+      title: 'Job Posting System of Bdjobs.com',
+      description:
+        'Contributed to the migration of The Job Posting system of Bdjobs.com Employer panel from legacy system to ASP.NET Core and Angular. built the API using ASP.NET Core following layered architecture in a team setting.',
+      thumbnail: '/assets/images/recruiter-bdjobs-jobposting.png',
+      liveUrl: 'https://recruiter.bdjobs.com/jobposting/job-information',
+      built_with: [
+        'ASP.NET Core Web API',
+        'Layered Architecture',
+        'Repository Pattern',
+      ],
     },
     // {
     //   title: 'MERN Shop',
@@ -171,14 +185,14 @@ export const info = {
     //   githubUrl: 'https://github.com/sayyedulawwab/checkout-page',
     //   built_with: ['HTML', 'CSS', 'JavaScript'],
     // },
-    {
-      title: 'Recipe page',
-      // thumbnail: 'https://raw.githubusercontent.com/sayyedulawwab/recipe-page/main/recipe-blog-desktop.png',
-      thumbnail: '/assets/images/recipe-blog-desktop.png',
-      liveUrl: 'https://hardcore-morse-56bb64.netlify.app/',
-      githubUrl: 'https://github.com/sayyedulawwab/recipe-page',
-      built_with: ['HTML', 'CSS'],
-    },
+    // {
+    //   title: 'Recipe page',
+    //   // thumbnail: 'https://raw.githubusercontent.com/sayyedulawwab/recipe-page/main/recipe-blog-desktop.png',
+    //   thumbnail: '/assets/images/recipe-blog-desktop.png',
+    //   liveUrl: 'https://hardcore-morse-56bb64.netlify.app/',
+    //   githubUrl: 'https://github.com/sayyedulawwab/recipe-page',
+    //   built_with: ['HTML', 'CSS'],
+    // },
     // {
     //   title: 'My Team page',
     //   thumbnail:
@@ -195,22 +209,22 @@ export const info = {
     //   githubUrl: 'https://github.com/sayyedulawwab/my-gallery',
     //   built_with: ['HTML', 'CSS'],
     // },
-    {
-      title: 'Interior Consultant',
-      // thumbnail: 'https://raw.githubusercontent.com/sayyedulawwab/interior-consultant/main/interior-consultant-desktop.png',
-      thumbnail: '/assets/images/interior-consultant-desktop.png',
-      liveUrl: 'https://awesome-jang-98c7ed.netlify.app/',
-      githubUrl: 'https://github.com/sayyedulawwab/interior-consultant',
-      built_with: ['HTML', 'CSS'],
-    },
-    {
-      title: 'Edie Homepage',
-      // thumbnail: 'https://raw.githubusercontent.com/sayyedulawwab/edie-homepage/main/edie-desktop.png',
-      thumbnail: '/assets/images/edie-desktop.png',
-      liveUrl: 'https://keen-shaw-b09835.netlify.app/',
-      githubUrl: 'https://github.com/sayyedulawwab/edie-homepage',
-      built_with: ['HTML', 'CSS'],
-    },
+    // {
+    //   title: 'Interior Consultant',
+    //   // thumbnail: 'https://raw.githubusercontent.com/sayyedulawwab/interior-consultant/main/interior-consultant-desktop.png',
+    //   thumbnail: '/assets/images/interior-consultant-desktop.png',
+    //   liveUrl: 'https://awesome-jang-98c7ed.netlify.app/',
+    //   githubUrl: 'https://github.com/sayyedulawwab/interior-consultant',
+    //   built_with: ['HTML', 'CSS'],
+    // },
+    // {
+    //   title: 'Edie Homepage',
+    //   // thumbnail: 'https://raw.githubusercontent.com/sayyedulawwab/edie-homepage/main/edie-desktop.png',
+    //   thumbnail: '/assets/images/edie-desktop.png',
+    //   liveUrl: 'https://keen-shaw-b09835.netlify.app/',
+    //   githubUrl: 'https://github.com/sayyedulawwab/edie-homepage',
+    //   built_with: ['HTML', 'CSS'],
+    // },
     // {
     //   title: '404 NOT FOUND',
     //   thumbnail:

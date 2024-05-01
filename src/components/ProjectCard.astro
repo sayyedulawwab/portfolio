@@ -5,15 +5,25 @@ const { project } = Astro.props;
 <div
   class="rounded shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] min-h-max p-3"
 >
-  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-    <img
-      src={project.thumbnail}
-      alt={project.title}
-      class="w-full object-cover object-top h-40"
-    />
-  </a>
-  <strong>{project.title}</strong>
-  <br />
+  {
+    project.thumbnail &&
+      (project.liveUrl ? (
+        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+          <img
+            src={project.thumbnail}
+            alt={project.title}
+            class="w-full object-cover object-top h-40"
+          />
+        </a>
+      ) : (
+        <img
+          src={project.thumbnail}
+          alt={project.title}
+          class="w-full object-cover object-top h-40"
+        />
+      ))
+  }
+  <h4 class="font-semibold">{project.title}</h4>
   {
     project.liveUrl && (
       <a
@@ -25,17 +35,23 @@ const { project } = Astro.props;
         Live
       </a>
     )
-  }{" "}
-  <a
-    href={project.githubUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    class="text-sky-600 hover:text-sky-800 hover:underline"
-  >
-    GitHub
-  </a>
+  }{' '}
+  {
+    project.githubUrl && (
+      <a
+        href={project.githubUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sky-600 hover:text-sky-800 hover:underline"
+      >
+        GitHub
+      </a>
+    )
+  }
+  {project.description && <p class="text-sm py-2">{project.description}</p>}
+
   {project.built_with && <p class="text-sm font-semibold">Bulit with:</p>}
-  <ul class="flex text-sm">
+  <ul class="flex text-sm flex-wrap">
     {
       project.built_with?.map((technology: unknown) => {
         return (
