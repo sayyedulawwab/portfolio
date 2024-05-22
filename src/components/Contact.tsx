@@ -51,9 +51,7 @@ const Contact = () => {
       <h2 className="font-bold text-2xl">Contact</h2>
       <div className="container mx-auto py-12">
         <div className="max-w-lg bg-white shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded px-8 py-6">
-          <div className="font-bold text-xl mb-4">
-            Hello Muhammad Sayyedul Awwab,
-          </div>
+          <div className="font-bold text-xl mb-4">Let's work together,</div>
           <form ref={form} onSubmit={sendEmail}>
             <div className="mb-4">
               <label

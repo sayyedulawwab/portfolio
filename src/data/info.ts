@@ -97,12 +97,12 @@ export const info = {
         logo: '/assets/images/logo-github.svg',
       },
       {
-        title: 'Visual Studio Code',
-        logo: '/assets/images/logo-vscode.svg',
-      },
-      {
         title: 'Visual Studio',
         logo: '/assets/images/logo-vs.svg',
+      },
+      {
+        title: 'Visual Studio Code',
+        logo: '/assets/images/logo-vscode.svg',
       },
     ],
   },
@@ -110,8 +110,7 @@ export const info = {
   projects: [
     {
       title: 'Ecommerce API',
-      description:
-        'Ecommerce API for managing products, categories, user authentication, reviews, and orders seamlessly within an ecommerce platform. Built with ASP.NET Core Web API and employing clean architecture principles, Domain Driven Design (DDD) and Mediator pattern for CQRS implementation.',
+      description: `Ecommerce API for managing products, categories, user authentication, reviews, and orders seamlessly within an ecommerce platform.`,
       thumbnail:
         'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       liveUrl: '',
@@ -121,8 +120,10 @@ export const info = {
         'ASP.NET Core Web API',
         'Clean Architecture',
         'Domain Driven Design (DDD)',
-        'CQRS',
+        'CQRS with Mediator Pattern',
         'Repository Pattern',
+        'Redis',
+        'Docker',
       ],
     },
     {

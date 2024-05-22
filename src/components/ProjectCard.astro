@@ -49,8 +49,6 @@ const { project } = Astro.props;
     )
   }
   {project.description && <p class="text-sm py-2">{project.description}</p>}
-
-  {project.built_with && <p class="text-sm font-semibold">Bulit with:</p>}
   <ul class="flex text-sm flex-wrap">
     {
       project.built_with?.map((technology: unknown) => {
