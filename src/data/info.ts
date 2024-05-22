@@ -74,18 +74,34 @@ export const info = {
         title: 'ASP.NET Core',
         logo: '/assets/images/logo-dotnetcore.svg',
       },
+      {
+        title: 'SQL Server',
+        logo: '/assets/images/logo-sqlserver.svg',
+      },
+      {
+        title: 'PostgreSQL',
+        logo: '/assets/images/logo-postgresql.svg',
+      },
+      {
+        title: 'Redis',
+        logo: '/assets/images/logo-redis.svg',
+      },
+      {
+        title: 'Docker',
+        logo: '/assets/images/logo-docker.svg',
+      },
       // {
       //   title: 'NodeJS',
       //   logo: '/assets/images/logo-nodejs.svg',
       // },
-      {
-        title: 'React',
-        logo: '/assets/images/logo-react.svg',
-      },
-      {
-        title: 'Tailwind',
-        logo: '/assets/images/logo-tailwind.svg',
-      },
+      // {
+      //   title: 'React',
+      //   logo: '/assets/images/logo-react.svg',
+      // },
+      // {
+      //   title: 'Tailwind',
+      //   logo: '/assets/images/logo-tailwind.svg',
+      // },
     ],
     tools: [
       {
