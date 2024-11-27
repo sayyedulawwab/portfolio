@@ -4,14 +4,34 @@ import { info } from '../data/info';
 import Icon from './Icon.astro';
 ---
 
-<section id="hero" class="min-h-80 flex items-center justify-between">
+<section id="hero" class="min-h-screen flex items-center justify-between">
   <!-- <img src="/assets/images/propic.png" alt="profile" /> -->
   <div>
     <p>
       <strong>Hi 👋 I'm</strong>
     </p>
     <h1 class="text-2xl font-bold">{info.name}</h1>
-    <p>{info.role}</p>
+
+    <div class="py-4 text-gray-800">
+      <p class="mb-3">
+        <strong>Software Engineer</strong> with 2+ years of hands-on experience
+        and passionate about building scalable, reliable and maintainable systems
+        using <strong
+          >.NET Core, Clean Architecture, Domain-Driven Design (DDD), CQRS,
+          Microservices, etc.</strong
+        >
+      </p>
+      <p>
+        Eager to excel in the software engineering track, I aspire to evolve
+        into a seasoned <strong>Software Architect</strong>.
+      </p>
+      <p class="mt-3">
+        Whether you're seeking a skilled software engineer committed to
+        continuous learning and innovation, <strong>let's connect</strong>. I'm
+        excited to explore how my expertise can contribute to the success of
+        your projects.
+      </p>
+    </div>
     <p class="flex">
       <a
         href={info.socialMedia.github.url}
