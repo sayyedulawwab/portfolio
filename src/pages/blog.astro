@@ -1,11 +1,7 @@
 ---
-import Contact from '../components/Contact.tsx';
-import Experience from '../components/Experience.astro';
-import Hero from '../components/Hero.astro';
-import Projects from '../components/Projects.astro';
-import Skills from '../components/Skills.astro';
-import Testimonials from '../components/Testimonials.astro';
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+const allPosts = await getCollection('blog');
 
 const title = 'sayyedulawwab | portfolio';
 const author = 'Muhammad Sayyedul Awwab';
@@ -14,10 +10,22 @@ const description =
 ---
 
 <BaseLayout title={title} author={author} description={description}>
-  <Hero />
-  <Projects />
-  <Experience />
-  <Skills />
-  <Testimonials />
-  <Contact client:load />
+  <main class="w-4/5 mx-auto text-lg">
+    <h1 class="text-3xl font-bold mb-6">Blog Posts</h1>
+    <div class="grid grid-cols-1 gap-6">
+      {
+        allPosts.map(post => (
+          <a href={`/blog/${post.slug}/`} class="text-gray-800">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                {post.data.title}
+              </h2>
+
+              <p class="text-gray-600 text-sm">{post.data.publishedOn}</p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </main>
 </BaseLayout>
