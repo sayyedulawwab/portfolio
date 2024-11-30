@@ -1,12 +1,10 @@
 ---
 title: 'Optimizing Web Performance: A Guide to HTTP Caching, CDN Integration, and Distributed Caching'
-publishedOn: 'Sep 6, 2024'
+publishedOn: 2024-09-06
 slug: 'optimizing-web-performance-a-guide-to-http-caching-cdn-integration-and-distributed-caching'
 ---
 
 # Optimizing Web Performance: A Guide to HTTP Caching, CDN Integration, and Distributed Caching
-
-Published On: Sep 6, 2024
 
 Imagine visiting a website where every page loads in an instant and every interaction feels seamless. This level of performance isn’t just a dream; it’s achievable with effective caching strategies.
 

@@ -1,8 +1,19 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const allPosts = await getCollection('blog');
+const allPosts = (await getCollection('blog')).sort(
+  (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
+    b.data.publishedOn.valueOf() - a.data.publishedOn.valueOf()
+);
+function formatDate(date: Date): string {
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
 
+  return new Date(date).toLocaleDateString(undefined, options);
+}
 const title = 'sayyedulawwab | portfolio';
 const author = 'Muhammad Sayyedul Awwab';
 const description =
@@ -11,7 +22,7 @@ const description =
 
 <BaseLayout title={title} author={author} description={description}>
   <main class="w-4/5 mx-auto text-lg">
-    <h1 class="text-3xl font-bold mb-6">Blog Posts</h1>
+    <h1 class="text-3xl font-bold mb-6">Recent Articles</h1>
     <div class="grid grid-cols-1 gap-6">
       {
         allPosts.map(post => (
@@ -21,7 +32,9 @@ const description =
                 {post.data.title}
               </h2>
 
-              <p class="text-gray-600 text-sm">{post.data.publishedOn}</p>
+              <p class="text-gray-600 text-sm">
+                {formatDate(post.data.publishedOn)}
+              </p>
             </div>
           </a>
         ))
