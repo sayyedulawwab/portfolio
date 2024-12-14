@@ -12,7 +12,7 @@ const { title, author, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="author" content={author} />
     <meta name="description" content={description} />
-    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
   </head>
   <body>
