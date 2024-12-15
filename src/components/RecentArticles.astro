@@ -1,0 +1,39 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+const allPosts = (await getCollection('blog'))
+  .sort(
+    (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
+      b.data.publishedOn.valueOf() - a.data.publishedOn.valueOf()
+  )
+  .slice(0, 3);
+function formatDate(date: Date): string {
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+
+  return new Date(date).toLocaleDateString(undefined, options);
+}
+---
+
+<section id="articles" class="mb-10">
+  <h2 class="font-bold text-2xl">Recent Articles</h2>
+  <div class="grid grid-cols-1 gap-6">
+    {
+      allPosts.map(post => (
+        <a href={`/blog/${post.slug}/`} class="text-gray-800">
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+              {post.data.title}
+            </h2>
+
+            <p class="text-gray-600 text-sm">
+              {formatDate(post.data.publishedOn)}
+            </p>
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</section>

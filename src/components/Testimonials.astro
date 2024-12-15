@@ -1,5 +1,6 @@
 ---
 import { markdown } from '@astropub/md';
+import { Image } from 'astro:assets';
 import { info } from '../data/info';
 ---
 
@@ -17,10 +18,12 @@ import { info } from '../data/info';
             )}
 
             <div class="flex items-center mt-4">
-              <img
+              <Image
                 src={recommendation.avatar}
                 alt={recommendation.name}
                 class="w-12 h-12 rounded-full mr-4"
+                width="325"
+                height="160"
               />
               <div>
                 <p class="text-gray-800 text-sm font-semibold">

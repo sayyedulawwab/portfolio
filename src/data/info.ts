@@ -15,6 +15,10 @@ export const info = {
       url: 'https://www.linkedin.com/in/sayyedulawwab/',
       logo: '/assets/images/linkedin-brands.svg',
     },
+    medium: {
+      url: 'https://medium.com/@sayyedulawwab',
+      logo: '/assets/images/monogram-medium.svg',
+    },
   },
 
   projects: [
