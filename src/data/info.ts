@@ -28,7 +28,7 @@ export const info = {
       thumbnail:
         'https://raw.githubusercontent.com/sayyedulawwab/EcommerceMicroservices/refs/heads/main/EcommerceMicroservice.png',
       liveUrl: '',
-      githubUrl: 'https://github.com/sayyedulawwab/EcommerceMicroservices',
+      githubUrl: '/assets/images/EcommerceMicroservices',
       built_with: [
         'Clean Architecture',
         'Domain Driven Design (DDD)',
@@ -46,7 +46,7 @@ export const info = {
       thumbnail:
         'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       liveUrl: '',
-      githubUrl: 'https://github.com/sayyedulawwab/EcommerceApp',
+      githubUrl: '/assets/images/EcommerceAPI.webp',
       built_with: [
         'Clean Architecture',
         'Domain Driven Design (DDD)',
