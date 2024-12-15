@@ -25,10 +25,9 @@ export const info = {
     {
       title: 'E-commerce Microservices',
       description: `E-commerce Microservices with Catalog, Identity, Ordering, Cart, Payment services using Clean Architecture, Domain Driven Design, CQRS, RabbitMQ message broker for Inter-service communication and Ocelot for API Gateway`,
-      thumbnail:
-        'https://raw.githubusercontent.com/sayyedulawwab/EcommerceMicroservices/refs/heads/main/EcommerceMicroservice.png',
+      thumbnail: '/assets/images/EcommerceMicroservice.png',
       liveUrl: '',
-      githubUrl: '/assets/images/EcommerceMicroservices',
+      githubUrl: 'https://github.com/sayyedulawwab/EcommerceMicroservices',
       built_with: [
         'Clean Architecture',
         'Domain Driven Design (DDD)',
@@ -43,10 +42,9 @@ export const info = {
     {
       title: 'Ecommerce API',
       description: `Ecommerce API for managing products, categories, user authentication, reviews, and orders seamlessly within an ecommerce platform.`,
-      thumbnail:
-        'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+      thumbnail: '/assets/images/EcommerceAPI.webp',
       liveUrl: '',
-      githubUrl: '/assets/images/EcommerceAPI.webp',
+      githubUrl: 'https://github.com/sayyedulawwab/EcommerceApp',
       built_with: [
         'Clean Architecture',
         'Domain Driven Design (DDD)',
