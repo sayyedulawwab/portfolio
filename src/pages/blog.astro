@@ -17,9 +17,15 @@ function formatDate(date: Date): string {
 const title = 'sayyedulawwab | Blog';
 const author = 'Muhammad Sayyedul Awwab';
 const description = 'Recent Articles';
+const pageUrl = '/blog';
 ---
 
-<BaseLayout title={title} author={author} description={description}>
+<BaseLayout
+  title={title}
+  author={author}
+  description={description}
+  pageUrl={pageUrl}
+>
   <main class="w-4/5 mx-auto text-lg">
     <h1 class="text-3xl font-bold mb-6">Recent Articles</h1>
     <div class="grid grid-cols-1 gap-6">

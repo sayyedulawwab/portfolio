@@ -23,9 +23,16 @@ const author = 'Muhammad Sayyedul Awwab';
 const description = entry.data.title
   ? entry.data.title
   : "Software Engineer with 2+ years of hands-on experience and passionate about building scalable, reliable and maintainable systems using .NET Core, Clean Architecture, Domain-Driven Design (DDD), CQRS, Microservices, etc. Eager to excel in the software engineering track, I aspire to evolve into a seasoned Software Architect. Whether you're seeking a skilled software engineer committed to continuous learning and innovation, let's connect. I'm excited to explore how my expertise can contribute to the success of your projects.";
+
+const pageUrl = `/blog/${entry.slug}`;
 ---
 
-<BaseLayout title={title} author={author} description={description}>
+<BaseLayout
+  title={title}
+  author={author}
+  description={description}
+  pageUrl={pageUrl}
+>
   <div class="prose md:prose-lg">
     <Content />
   </div>

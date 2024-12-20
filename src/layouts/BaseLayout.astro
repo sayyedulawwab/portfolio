@@ -2,7 +2,7 @@
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 
-const { title, author, description } = Astro.props;
+const { title, author, description, pageUrl } = Astro.props;
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -12,6 +12,7 @@ const { title, author, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="author" content={author} />
     <meta name="description" content={description} />
+    <link rel="canonical" href=`https://sayyedulawwab.com${pageUrl}` />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
     <!-- Google tag (gtag.js) -->
