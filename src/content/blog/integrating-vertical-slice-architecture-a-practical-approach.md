@@ -1,12 +1,10 @@
-<!-- ---
+---
 title: 'Integrating Vertical Slice Architecture - A Practical Approach'
-publishedOn: 2024-12-19
+publishedOn: 2024-12-20
 slug: 'integrating-vertical-slice-architecture-a-practical-approach'
 setup: |
   import { Picture } from "astro-imagetools/components";
 ---
-
-![clean architecture vertical slice](./attachments/clean-architecture-vertical-slice-676439436144b.webp)
 
 # Integrating Vertical Slice Architecture - A Practical Approach
 
@@ -14,9 +12,11 @@ setup: |
 
 As software projects scale, maintainability and modularity become critical. Recently, I integrated **Vertical Slice Architecture** into my Ecommerce Microservices solution to better organize my codebase around business use cases. This article shares my thought process, the decisions I made, and why I believe this approach enhances scalability and productivity.
 
-## What is Vertical Slice Architecture?update
+## What is Vertical Slice Architecture?
 
 Vertical Slice Architecture organizes code around features or use cases rather than technical layers. Each feature becomes a self-contained unit, housing everything required to execute that functionality.
+
+![clean architecture vertical slice](./attachments/clean-architecture-vertical-slice-676439436144b.webp)
 
 ## Why I Made the Change
 
@@ -70,5 +70,3 @@ This reorganization resulted in:
 ## Conclusion
 
 Integrating Vertical Slice Architecture into my solution simplifies feature development, aligns with real-world scenarios, and makes scaling easier. There is a common misconception about choosing between Clean Architecture and Vertical Slice Architecture. However, Clean Architecture also emphasizes use cases, which aligns perfectly with the main concept of Vertical Slice Architecture. Both approaches can coexist and complement each other, as demonstrated in my solution.
-
-Have you tried Vertical Slice Architecture? Share your thoughts and experiences on LinkedIn post or Medium article! -->
