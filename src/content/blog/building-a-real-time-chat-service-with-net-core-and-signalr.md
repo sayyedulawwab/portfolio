@@ -616,7 +616,24 @@ This article covered the foundational steps to build a real-time chat applicatio
 
 ## Reference
 
-- Chat Service (Backend) GitHub Repository - https://github.com/sayyedulawwab/ChatService
-- Chat Client (Frontend) GitHub Repository - https://github.com/sayyedulawwab/ChatClient
-- Introduction to SignalR by Microsoft - https://learn.microsoft.com/en-us/aspnet/signalr/overview/getting-started/introduction-to-signalr
-- ChatGPT for paraphrasing and refining content flow
+<ul>
+  <li class="break-words">
+    Chat Service (Backend) GitHub Repository - 
+    <a href="https://github.com/sayyedulawwab/ChatService">
+      https://github.com/sayyedulawwab/ChatService
+    </a>
+  </li>
+  <li class="break-words">
+    Chat Client (Frontend) GitHub Repository - 
+    <a href="https://github.com/sayyedulawwab/ChatClient">
+      https://github.com/sayyedulawwab/ChatClient
+    </a>
+  </li>
+  <li class="break-words">
+    Introduction to SignalR by Microsoft - 
+    <a href="https://learn.microsoft.com/en-us/aspnet/signalr/overview/getting-started/introduction-to-signalr">
+      https://learn.microsoft.com/en-us/aspnet/signalr/overview/getting-started/introduction-to-signalr
+    </a>
+  </li>
+  <li>ChatGPT for paraphrasing and refining content flow</li>
+</ul>

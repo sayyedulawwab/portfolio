@@ -132,5 +132,12 @@ For high-performance cases needing rapid execution and low memory use, Dapper is
 
 ## Reference
 
-- GitHub Repository: [https://github.com/sayyedulawwab/EFCoreVsDapper](https://github.com/sayyedulawwab/EFCoreVsDapper)
-- ChatGPT for paraphrasing and refining content flow
+<ul>
+  <li class="break-words">
+    GitHub Repository —
+    <a href="https://github.com/sayyedulawwab/EFCoreVsDapper">
+      https://github.com/sayyedulawwab/EFCoreVsDapper
+    </a>
+  </li>
+  <li>ChatGPT for paraphrasing and refining content flow</li>
+</ul>

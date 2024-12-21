@@ -275,4 +275,11 @@ While this project currently implements basic features like CRUD operations, use
 
 ## References
 
-- Github Repo — [https://github.com/sayyedulawwab/EcommerceMicroservices](https://github.com/sayyedulawwab/EcommerceMicroservices)
+<ul>
+  <li class="break-words">
+    GitHub Repository —
+    <a href="https://github.com/sayyedulawwab/EcommerceMicroservices">
+      https://github.com/sayyedulawwab/EcommerceMicroservices
+    </a>
+  </li>
+</ul>

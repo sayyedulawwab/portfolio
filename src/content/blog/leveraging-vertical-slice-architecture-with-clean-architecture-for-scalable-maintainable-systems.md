@@ -120,4 +120,11 @@ Ultimately, there’s no one-size-fits-all solution. The key is to adapt your ar
 
 ## References
 
-- Ecommerce Microservices GitHub Repository - https://github.com/sayyedulawwab/EcommerceMicroservices
+<ul>
+  <li class="break-words">
+    Ecommerce Microservices GitHub Repository —
+    <a href="https://github.com/sayyedulawwab/EcommerceMicroservices">
+      https://github.com/sayyedulawwab/EcommerceMicroservices
+    </a>
+  </li>
+</ul>
