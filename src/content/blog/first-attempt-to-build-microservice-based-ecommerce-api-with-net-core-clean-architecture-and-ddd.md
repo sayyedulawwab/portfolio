@@ -278,7 +278,7 @@ While this project currently implements basic features like CRUD operations, use
 <ul>
   <li class="break-words">
     GitHub Repository —
-    <a href="https://github.com/sayyedulawwab/EcommerceMicroservices">
+    <a href="https://github.com/sayyedulawwab/EcommerceMicroservices" target="_blank">
       https://github.com/sayyedulawwab/EcommerceMicroservices
     </a>
   </li>

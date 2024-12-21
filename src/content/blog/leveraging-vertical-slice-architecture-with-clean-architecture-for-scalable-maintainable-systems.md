@@ -123,7 +123,7 @@ Ultimately, there’s no one-size-fits-all solution. The key is to adapt your ar
 <ul>
   <li class="break-words">
     Ecommerce Microservices GitHub Repository —
-    <a href="https://github.com/sayyedulawwab/EcommerceMicroservices">
+    <a href="https://github.com/sayyedulawwab/EcommerceMicroservices" target="_blank">
       https://github.com/sayyedulawwab/EcommerceMicroservices
     </a>
   </li>

@@ -135,9 +135,8 @@ For high-performance cases needing rapid execution and low memory use, Dapper is
 <ul>
   <li class="break-words">
     GitHub Repository —
-    <a href="https://github.com/sayyedulawwab/EFCoreVsDapper">
+    <a href="https://github.com/sayyedulawwab/EFCoreVsDapper" target="_blank">
       https://github.com/sayyedulawwab/EFCoreVsDapper
     </a>
   </li>
-  <li>ChatGPT for paraphrasing and refining content flow</li>
 </ul>
