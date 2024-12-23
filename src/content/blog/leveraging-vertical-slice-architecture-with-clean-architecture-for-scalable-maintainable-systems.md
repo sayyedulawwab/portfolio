@@ -10,7 +10,7 @@ setup: |
 
 ## Introduction
 
-As software projects grow, the need for maintainability and modularity becomes even more critical. Recently, I decided to integrate **Vertical Slice Architecture** into my <a href="https://github.com/sayyedulawwab/EcommerceMicroservices" target="_blank">Ecommerce Microservices solution</a>. My goal was to organize the codebase around business use cases, making it more intuitive and scalable. In this article, I’ll walk you through my thought process, the decisions I made, and why I think this hybrid approach can boost both scalability and productivity.
+As software projects grow, the need for maintainability and modularity becomes even more critical. Recently, I decided to integrate **Vertical Slice Architecture** into my <a href="https://github.com/sayyedulawwab/EcommerceMicroservices" target="_blank">Ecommerce Microservices solution</a>. To understand the overall architecture of the project you can read my previous article — <a href="https://sayyedulawwab.com/blog/first-attempt-to-build-microservice-based-ecommerce-api-with-net-core-clean-architecture-and-ddd/" target="_blank">First attempt to build Microservice-Based API with .NET Core, Clean Architecture, and DDD</a>. My goal here was to organize the codebase around business use cases, making it more intuitive and scalable. In this article, I’ll walk you through my thought process, the decisions I made, and why I think this hybrid approach can boost both scalability and productivity.
 
 ## What is Vertical Slice Architecture?
 
@@ -125,6 +125,12 @@ Ultimately, there’s no one-size-fits-all solution. The key is to adapt your ar
     Ecommerce Microservices GitHub Repository —
     <a href="https://github.com/sayyedulawwab/EcommerceMicroservices" target="_blank">
       https://github.com/sayyedulawwab/EcommerceMicroservices
+    </a>
+  </li>
+  <li class="break-words">
+    Previous article — First attempt to build Microservice-Based API with .NET Core, Clean Architecture, and DDD —
+    <a href="https://sayyedulawwab.com/blog/first-attempt-to-build-microservice-based-ecommerce-api-with-net-core-clean-architecture-and-ddd/" target="_blank">
+      https://sayyedulawwab.com/blog/first-attempt-to-build-microservice-based-ecommerce-api-with-net-core-clean-architecture-and-ddd/
     </a>
   </li>
 </ul>
