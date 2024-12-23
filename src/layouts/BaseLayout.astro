@@ -15,28 +15,21 @@ const { title, author, description, pageUrl } = Astro.props;
     <link rel="canonical" href=`https://sayyedulawwab.com${pageUrl}` />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
-    <!-- Google tag (gtag.js) -->
     <script
-      is:inline
+      type="text/partytown"
+      async
       src="https://www.googletagmanager.com/gtag/js?id=G-KNPHGYLQ36"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      // This should ALWAYS be set before the gtag("config", "G-XXXXXXXXXX"); line
-      gtag('consent', 'default', {
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-        analytics_storage: 'denied',
-      });
-
-      gtag('config', 'G-KNPHGYLQ36');
-    </script>
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script is:inline type="text/partytown">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-KNPHGYLQ36');
+  </script>
   <body>
     <Header />
     <main class="w-4/5 mx-auto text-lg min-h-screen my-8">

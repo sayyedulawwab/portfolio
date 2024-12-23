@@ -191,5 +191,3 @@ public async Task<IActionResult> EditProduct(long id, EditProductRequest request
 With these modifications, I improved both maintainability and adherence to REST principles in my E-Commerce Microservice project. The introduction of a Shared Kernel ensures consistency across services, while the enhanced error-handling mechanism provides more meaningful and precise responses.
 
 These changes not only simplify future development but also make the application more robust and scalable. I plan to apply these improvements across all controllers in all services, further streamlining the entire project.
-
-What do you think of these changes? Let me know in the comments!

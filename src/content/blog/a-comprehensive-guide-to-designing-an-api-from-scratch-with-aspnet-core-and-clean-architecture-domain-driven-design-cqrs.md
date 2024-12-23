@@ -529,6 +529,23 @@ Designing an API using ASP.NET Core, Clean Architecture, DDD, and CQRS provides 
 
 For further exploring, check out:
 
-- How To Approach Clean Architecture Folder Structure — [https://www.milanjovanovic.tech/blog/clean-architecture-folder-structure](https://www.milanjovanovic.tech/blog/clean-architecture-folder-structure)
-- Milan Jovanović — [https://www.youtube.com/@MilanJovanovicTech](https://www.youtube.com/@MilanJovanovicTech)
-- My Ecommerce API Project — [https://github.com/sayyedulawwab/EcommerceApp](https://github.com/sayyedulawwab/EcommerceApp)
+<ul>
+  <li class="break-words">
+    How To Approach Clean Architecture Folder Structure —
+    <a href="https://www.milanjovanovic.tech/blog/clean-architecture-folder-structure" target="_blank">
+      https://www.milanjovanovic.tech/blog/clean-architecture-folder-structure
+    </a>
+  </li>
+  <li class="break-words">
+    Milan Jovanović - 
+    <a href="https://www.youtube.com/@MilanJovanovicTech" target="_blank">
+      https://www.youtube.com/@MilanJovanovicTech
+    </a>
+  </li>
+  <li class="break-words">
+    My Ecommerce API Project - 
+    <a href="https://github.com/sayyedulawwab/EcommerceApp" target="_blank">
+      https://github.com/sayyedulawwab/EcommerceApp
+    </a>
+  </li>
+</ul>
