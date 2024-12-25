@@ -1,5 +1,5 @@
 export const info = {
-  baseUrl: 'https://sayyedulawwab.netlify.app/',
+  baseUrl: 'https://sayyedulawwab.com/',
   name: 'Muhammad Sayyedul Awwab',
   headline: 'Software Engineer | .NET Core | Aspiring Software Architect',
   socialMedia: {
