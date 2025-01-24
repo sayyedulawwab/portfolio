@@ -16,13 +16,9 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
-const title = entry.data.title
-  ? entry.data.title
-  : 'sayyedulawwab | portfolio';
+const title = entry.data.title;
 const author = 'Muhammad Sayyedul Awwab';
-const description = entry.data.title
-  ? entry.data.title
-  : "Software Engineer with 2+ years of hands-on experience and passionate about building scalable, reliable and maintainable systems using .NET Core, Clean Architecture, Domain-Driven Design (DDD), CQRS, Microservices, etc. Eager to excel in the software engineering track, I aspire to evolve into a Software Architect. Whether you're seeking a skilled software engineer committed to continuous learning and innovation, let's connect. I'm excited to explore how my expertise can contribute to the success of your projects.";
+const description = entry.data.metaDescription;
 
 const pageUrl = `/blog/${entry.slug}`;
 ---

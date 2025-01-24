@@ -2,6 +2,7 @@
 title: 'Refactoring the E-Commerce Microservice Project — Introducing a Shared Kernel and Enhanced Error Handling'
 publishedOn: 2024-11-24
 slug: 'refactoring-the-e-commerce-microservice-project-introducing-a-shared-kernel-and-enhanced-error-handling'
+metaDescription: 'Refactoring the E-Commerce Microservice Project — Introducing a Shared Kernel and Enhanced Error Handling'
 ---
 
 # Refactoring the E-Commerce Microservice Project — Introducing a Shared Kernel and Enhanced Error Handling

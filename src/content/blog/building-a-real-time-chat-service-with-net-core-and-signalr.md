@@ -2,6 +2,7 @@
 title: 'Building a Real-Time Chat Service with .NET Core and SignalR'
 publishedOn: 2024-12-14
 slug: 'building-a-real-time-chat-service-with-net-core-and-signalr'
+metaDescription: 'Building a Real-Time Chat Service with .NET Core and SignalR'
 setup: |
   import { Picture } from "astro-imagetools/components";
 ---
