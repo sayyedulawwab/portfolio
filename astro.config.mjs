@@ -13,6 +13,9 @@ export default defineConfig({
     tailwind(),
     react(),
     sitemap({
+      changefreq: 'daily',
+      priority: 0.9,
+      lastmod: new Date(),
       serialize: ({ site, url }) => {
         // Customize specific URLs to remove trailing slashes
         if (url === 'https://sayyedulawwab.com/') {
