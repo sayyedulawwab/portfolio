@@ -12,7 +12,19 @@ export default defineConfig({
   integrations: [
     tailwind(),
     react(),
-    sitemap({}),
+    sitemap({
+      serialize: ({ site, url }) => {
+        // Customize specific URLs to remove trailing slashes
+        if (url === 'https://sayyedulawwab.com/') {
+          return { url: 'https://sayyedulawwab.com' };
+        }
+        if (url === 'https://sayyedulawwab.com/blog/') {
+          return { url: 'https://sayyedulawwab.com/blog' };
+        }
+        // Keep other URLs unchanged
+        return { url };
+      },
+    }),
     partytown({
       // Example: Disable debug mode.
       config: { debug: false },
