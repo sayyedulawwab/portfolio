@@ -5,8 +5,6 @@ slug: 'refactoring-the-e-commerce-microservice-project-introducing-a-shared-kern
 metaDescription: 'Refactoring the E-Commerce Microservice Project — Introducing a Shared Kernel and Enhanced Error Handling'
 ---
 
-# Refactoring the E-Commerce Microservice Project — Introducing a Shared Kernel and Enhanced Error Handling
-
 As I continued refining my E-Commerce Microservice project, I implemented significant improvements, including the introduction of a **Shared Kernel** and updates to the error-handling mechanism. This article walks through the thought process, changes made, and the benefits achieved.
 
 ![Microservice Shared Kernel](./attachments/1_8qKrGqDDRidjzmL5mCvurg.webp)

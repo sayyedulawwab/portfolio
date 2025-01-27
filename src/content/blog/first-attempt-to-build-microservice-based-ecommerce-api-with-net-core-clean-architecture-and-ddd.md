@@ -5,8 +5,6 @@ slug: 'first-attempt-to-build-microservice-based-ecommerce-api-with-net-core-cle
 metaDescription: 'First attempt to build Microservice-Based API with .NET Core, Clean Architecture, and DDD'
 ---
 
-# First attempt to build Microservice-Based API with .NET Core, Clean Architecture, and DDD
-
 In today’s fast-paced digital landscape, businesses demand applications that can scale effortlessly while ensuring seamless updates and high availability. Microservices architecture provides the ideal blueprint for achieving these goals. In this article, I’ll share my first attempt of building a microservice-based API for an eCommerce platform.
 
 ## Planned Features

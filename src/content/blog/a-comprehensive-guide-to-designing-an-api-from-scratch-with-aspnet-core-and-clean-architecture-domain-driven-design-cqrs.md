@@ -7,8 +7,6 @@ setup: |
   import { Picture } from "astro-imagetools/components";
 ---
 
-# A Comprehensive Guide to Designing an API from Scratch with ASP.NET Core and Clean Architecture, Domain Driven Design (DDD), CQRS
-
 Designing a robust API involves balancing scalability, maintainability, and best practices. In this guide, I share my experience of building an API from scratch using ASP.NET Core, Clean Architecture, Domain-Driven Design (DDD), and Command Query Responsibility Segregation (CQRS).
 
 ![clean architecture - milan jovanovic](./attachments/clean-architecture-milan-jovanovic.webp)

@@ -5,8 +5,6 @@ slug: 'choosing-between-ef-core-and-dapper-benchmarking-performance-and-efficien
 metaDescription: 'Choosing Between EF Core and Dapper — Benchmarking Performance and Efficiency'
 ---
 
-# Choosing Between EF Core and Dapper — Benchmarking Performance and Efficiency
-
 When working with .NET applications, developers often face a choice between Entity Framework Core (EF Core) and Dapper for data access. EF Core is a full-fledged ORM that offers a rich set of features like migrations, LINQ queries, and change tracking, making it a convenient option for applications with complex data relationships. Dapper, on the other hand, is a lightweight ORM known for its performance, with minimal overhead and direct mapping capabilities.
 
 The question then arises: When does it make sense to choose EF Core over Dapper, and vice versa? In this article, we’ll benchmark both ORMs to compare their performance and memory usage across common operations, providing insights on when each might be the better choice.

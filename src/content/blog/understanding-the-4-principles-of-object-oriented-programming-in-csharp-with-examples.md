@@ -7,8 +7,6 @@ setup: |
   import { Picture } from "astro-imagetools/components";
 ---
 
-# Understanding the 4 Principles of Object-Oriented Programming in C# with Examples
-
 In this article, I am going to talk about what the four principles of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance and Polymorphism) stand for with some practical examples.
 
 Let's get started!

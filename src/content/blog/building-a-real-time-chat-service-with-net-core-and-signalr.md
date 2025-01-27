@@ -7,8 +7,6 @@ setup: |
   import { Picture } from "astro-imagetools/components";
 ---
 
-# Building a Real-Time Chat Service with .NET Core and SignalR
-
 ## Introduction
 
 In today’s world, real-time communication is an essential feature of modern applications. Whether it’s chatting on platforms like Messenger, WhatsApp, or Microsoft Teams, real-time messaging has become integral to our lives. These platforms not only support messaging but also provide advanced features like audio and video calling, sparking my curiosity about implementing real-time communication functionalities.

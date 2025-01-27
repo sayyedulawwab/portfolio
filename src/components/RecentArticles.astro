@@ -5,6 +5,9 @@ const allPosts = (await getCollection('blog'))
     (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
       b.data.publishedOn.valueOf() - a.data.publishedOn.valueOf()
   )
+  .filter(
+    (post: CollectionEntry<'blog'>) => post.data.publishedOn <= new Date()
+  )
   .slice(0, 3);
 function formatDate(date: Date): string {
   const options: Intl.DateTimeFormatOptions = {

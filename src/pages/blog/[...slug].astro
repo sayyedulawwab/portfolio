@@ -21,6 +21,16 @@ const author = 'Muhammad Sayyedul Awwab';
 const description = entry.data.metaDescription;
 
 const pageUrl = `/blog/${entry.slug}/`;
+
+function formatDate(date: Date): string {
+  const options: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+
+  return new Date(date).toLocaleDateString(undefined, options);
+}
 ---
 
 <BaseLayout
@@ -30,6 +40,11 @@ const pageUrl = `/blog/${entry.slug}/`;
   pageUrl={pageUrl}
 >
   <div class="mx-auto prose md:prose-md lg:prose-lg">
+    <h1>{title}</h1>
+
+    <p class="text-gray-600">
+      {formatDate(entry.data.publishedOn)}
+    </p>
     <Content />
   </div>
 </BaseLayout>
