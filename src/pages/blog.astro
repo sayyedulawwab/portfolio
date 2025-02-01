@@ -1,17 +1,16 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const allPosts = (await getCollection('blog'))
-  .sort(
-    (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
-      new Date(b.data.publishedOn + 'T00:00:00').getTime() -
-      new Date(a.data.publishedOn + 'T00:00:00').getTime()
-  )
-  .filter(
-    (post: CollectionEntry<'blog'>) =>
-      new Date(post.data.publishedOn + 'T00:00:00').getTime() <=
-      new Date().getTime()
-  );
+const allPosts = (await getCollection('blog')).sort(
+  (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
+    new Date(b.data.publishedOn + 'T00:00:00').getTime() -
+    new Date(a.data.publishedOn + 'T00:00:00').getTime()
+);
+// .filter(
+//   (post: CollectionEntry<'blog'>) =>
+//     new Date(post.data.publishedOn + 'T00:00:00').getTime() <=
+//     new Date().getTime()
+// );
 function formatDate(date: string): string {
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',

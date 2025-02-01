@@ -6,11 +6,11 @@ const allPosts = (await getCollection('blog'))
       new Date(b.data.publishedOn + 'T00:00:00').getTime() -
       new Date(a.data.publishedOn + 'T00:00:00').getTime()
   )
-  .filter(
-    (post: CollectionEntry<'blog'>) =>
-      new Date(post.data.publishedOn + 'T00:00:00').getTime() <=
-      new Date().getTime()
-  )
+  // .filter(
+  //   (post: CollectionEntry<'blog'>) =>
+  //     new Date(post.data.publishedOn + 'T00:00:00').getTime() <=
+  //     new Date().getTime()
+  // )
   .slice(0, 3);
 function formatDate(date: string): string {
   const options: Intl.DateTimeFormatOptions = {
