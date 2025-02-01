@@ -1,6 +1,6 @@
 ---
 title: 'A Practical Guide to SOLID Principles for Backend Developers'
-publishedOn: 2025-01-28
+publishedOn: '2025-01-28'
 slug: 'a-practical-guide-to-solid-principles-for-backend-developers'
 metaDescription: 'Learn to apply the SOLID principles in backend development with practical C# examples for clean, scalable, and maintainable code.'
 setup: |

@@ -4,14 +4,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const allPosts = (await getCollection('blog'))
   .sort(
     (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
-      b.data.publishedOn.valueOf() - a.data.publishedOn.valueOf()
+      new Date(b.data.publishedOn + 'T00:00:00').getTime() -
+      new Date(a.data.publishedOn + 'T00:00:00').getTime()
   )
   .filter(
     (post: CollectionEntry<'blog'>) =>
-      post.data.publishedOn.toLocaleDateString() <=
-      new Date().toLocaleDateString()
+      new Date(post.data.publishedOn + 'T00:00:00').getTime() <=
+      new Date().getTime()
   );
-function formatDate(date: Date): string {
+function formatDate(date: string): string {
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'long',

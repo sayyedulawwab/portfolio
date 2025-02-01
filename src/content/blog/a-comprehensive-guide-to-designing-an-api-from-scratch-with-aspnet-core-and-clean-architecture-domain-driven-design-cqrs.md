@@ -1,6 +1,6 @@
 ---
 title: 'A Comprehensive Guide to Designing an API from Scratch with ASP.NET Core and Clean Architecture, Domain Driven Design (DDD), CQRS'
-publishedOn: 2024-09-10
+publishedOn: '2024-09-10'
 slug: 'a-comprehensive-guide-to-designing-an-api-from-scratch-with-aspnet-core-and-clean-architecture-domain-driven-design-cqrs'
 metaDescription: 'A Comprehensive Guide to Designing an API from Scratch with ASP.NET Core and Clean Architecture, Domain Driven Design (DDD), CQRS'
 setup: |

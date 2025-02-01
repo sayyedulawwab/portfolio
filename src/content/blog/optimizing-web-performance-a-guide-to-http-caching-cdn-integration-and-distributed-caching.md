@@ -1,6 +1,6 @@
 ---
 title: 'Optimizing Web Performance: A Guide to HTTP Caching, CDN Integration, and Distributed Caching'
-publishedOn: 2024-09-06
+publishedOn: '2024-09-06'
 slug: 'optimizing-web-performance-a-guide-to-http-caching-cdn-integration-and-distributed-caching'
 metaDescription: 'Optimizing Web Performance: A Guide to HTTP Caching, CDN Integration, and Distributed Caching'
 ---

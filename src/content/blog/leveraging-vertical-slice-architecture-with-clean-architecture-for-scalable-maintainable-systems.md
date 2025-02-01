@@ -1,6 +1,6 @@
 ---
 title: 'Leveraging Vertical Slice Architecture with Clean Architecture for Scalable, Maintainable Systems'
-publishedOn: 2024-12-20
+publishedOn: '2024-12-20'
 slug: 'leveraging-vertical-slice-architecture-with-clean-architecture-for-scalable-maintainable-systems'
 metaDescription: 'Leveraging Vertical Slice Architecture with Clean Architecture for Scalable, Maintainable Systems'
 setup: |

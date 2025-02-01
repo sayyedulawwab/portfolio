@@ -1,6 +1,6 @@
 ---
 title: 'First attempt to build Microservice-Based API with .NET Core, Clean Architecture, and DDD'
-publishedOn: 2024-11-18
+publishedOn: '2024-11-18'
 slug: 'first-attempt-to-build-microservice-based-ecommerce-api-with-net-core-clean-architecture-and-ddd'
 metaDescription: 'First attempt to build Microservice-Based API with .NET Core, Clean Architecture, and DDD'
 ---

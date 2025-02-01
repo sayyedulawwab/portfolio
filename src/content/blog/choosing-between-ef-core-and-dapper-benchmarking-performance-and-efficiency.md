@@ -1,6 +1,6 @@
 ---
 title: 'Choosing Between EF Core and Dapper — Benchmarking Performance and Efficiency'
-publishedOn: 2024-11-01
+publishedOn: '2024-11-01'
 slug: 'choosing-between-ef-core-and-dapper-benchmarking-performance-and-efficiency'
 metaDescription: 'Choosing Between EF Core and Dapper — Benchmarking Performance and Efficiency'
 ---
