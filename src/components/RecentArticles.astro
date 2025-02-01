@@ -6,7 +6,9 @@ const allPosts = (await getCollection('blog'))
       b.data.publishedOn.valueOf() - a.data.publishedOn.valueOf()
   )
   .filter(
-    (post: CollectionEntry<'blog'>) => post.data.publishedOn <= new Date()
+    (post: CollectionEntry<'blog'>) =>
+      post.data.publishedOn.toLocaleDateString() <=
+      new Date().toLocaleDateString()
   )
   .slice(0, 3);
 function formatDate(date: Date): string {

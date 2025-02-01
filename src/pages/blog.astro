@@ -7,7 +7,9 @@ const allPosts = (await getCollection('blog'))
       b.data.publishedOn.valueOf() - a.data.publishedOn.valueOf()
   )
   .filter(
-    (post: CollectionEntry<'blog'>) => post.data.publishedOn <= new Date()
+    (post: CollectionEntry<'blog'>) =>
+      post.data.publishedOn.toLocaleDateString() <=
+      new Date().toLocaleDateString()
   );
 function formatDate(date: Date): string {
   const options: Intl.DateTimeFormatOptions = {
@@ -40,7 +42,6 @@ const pageUrl = '/blog';
               <h2 class="text-2xl font-semibold text-gray-800 mb-4">
                 {post.data.title}
               </h2>
-
               <p class="text-gray-600 text-sm">
                 {formatDate(post.data.publishedOn)}
               </p>
