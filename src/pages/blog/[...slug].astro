@@ -22,7 +22,7 @@ const description = entry.data.metaDescription;
 
 const pageUrl = `/blog/${entry.slug}/`;
 
-function formatDate(date: Date): string {
+function formatDate(date: string): string {
   const options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'long',
