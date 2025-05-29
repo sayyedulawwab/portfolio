@@ -5,15 +5,37 @@ const Contact = () => {
   const form: any = useRef();
   const [messageSent, setMessageSent] = useState(false);
   const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
+  const [formValues, setFormValues] = useState({
+    from_name: '',
+    from_email: '',
+    message: '',
+  });
 
-  const sendEmail = (e: any) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+
+    // Update form values
+    setFormValues(prev => ({ ...prev, [name]: value }));
+
+    // Remove error if field is now valid
+    if (value.trim() !== '') {
+      setFormErrors(prev => {
+        const updated = { ...prev };
+        delete updated[name];
+        return updated;
+      });
+    }
+  };
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Perform validation
-    const formData = new FormData(form.current);
-    let errors: { [key: string]: string } = {};
-    formData.forEach((value, key) => {
-      if (!value) {
+    // Validation
+    const errors: { [key: string]: string } = {};
+    Object.entries(formValues).forEach(([key, value]) => {
+      if (!value.trim()) {
         errors[key] = 'This field is required';
       }
     });
@@ -23,7 +45,6 @@ const Contact = () => {
       return;
     }
 
-    // Clear previous form errors if any
     setFormErrors({});
 
     emailjs
@@ -36,12 +57,18 @@ const Contact = () => {
       .then(
         result => {
           setMessageSent(true);
-          setTimeout(() => setMessageSent(false), 5000); // Clear toast message after 5 seconds
+          setTimeout(() => setMessageSent(false), 5000);
           form.current.reset();
+          setFormValues({ from_name: '', from_email: '', message: '' });
         },
         error => {}
       );
   };
+
+  const getInputClasses = (field: string) =>
+    `appearance-none border rounded w-full py-2 px-3 text-sm text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+      formErrors[field] ? 'border-red-500' : 'border-gray-300'
+    }`;
 
   return (
     <section id="contact" className="mb-10">
@@ -52,10 +79,9 @@ const Contact = () => {
         I'd love to hear from you.
       </p>
       <div className="container mx-auto py-6">
-        <div className="max-w-lg bg-white shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] rounded px-8 py-6">
-          {/* <div className="font-bold text-xl mb-4">Let's Work Together!</div> */}
-
+        <div className="max-w-lg bg-white shadow-lg rounded px-8 py-6">
           <form ref={form} onSubmit={sendEmail}>
+            {/* Name Field */}
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
@@ -68,12 +94,16 @@ const Contact = () => {
                 name="from_name"
                 type="text"
                 placeholder="eg. John Doe"
-                className="appearance-none border rounded w-full py-2 px-3 text-sm text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className={getInputClasses('from_name')}
+                value={formValues.from_name}
+                onChange={handleInputChange}
               />
-              {formErrors.name && (
-                <p className="text-red-500">{formErrors.name}</p>
+              {formErrors.from_name && (
+                <p className="text-red-500">{formErrors.from_name}</p>
               )}
             </div>
+
+            {/* Email Field */}
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
@@ -86,12 +116,16 @@ const Contact = () => {
                 name="from_email"
                 type="email"
                 placeholder="eg. johndoe@example.com"
-                className="appearance-none border rounded w-full py-2 px-3 text-sm text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className={getInputClasses('from_email')}
+                value={formValues.from_email}
+                onChange={handleInputChange}
               />
-              {formErrors.email && (
-                <p className="text-red-500">{formErrors.email}</p>
+              {formErrors.from_email && (
+                <p className="text-red-500">{formErrors.from_email}</p>
               )}
             </div>
+
+            {/* Message Field */}
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
@@ -102,10 +136,12 @@ const Contact = () => {
               <textarea
                 id="message"
                 name="message"
-                className="appearance-none border rounded w-full py-2 px-3 text-sm text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 rows={4}
                 placeholder=""
-              ></textarea>
+                className={getInputClasses('message')}
+                value={formValues.message}
+                onChange={handleInputChange}
+              />
               {formErrors.message && (
                 <p className="text-red-500">{formErrors.message}</p>
               )}
@@ -120,10 +156,10 @@ const Contact = () => {
               </button>
             </div>
           </form>
+
           {messageSent && (
             <div className="bg-green-600 rounded text-white text-center py-2 my-2">
-              Thanks for reaching out! I'll respond as soon as possible. If it's
-              urgent, you can email me directly at sayyedulawwab@gmail.com
+              Thanks for reaching out! I'll respond as soon as possible.
             </div>
           )}
         </div>
