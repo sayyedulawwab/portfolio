@@ -59,13 +59,13 @@ const Contact = () => {
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="name"
+                htmlFor="from_name"
               >
                 Your name
               </label>
               <input
-                id="name"
-                name="name"
+                id="from_name"
+                name="from_name"
                 type="text"
                 placeholder="eg. John Doe"
                 className="appearance-none border rounded w-full py-2 px-3 text-sm text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -77,13 +77,13 @@ const Contact = () => {
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="email"
+                htmlFor="from_email"
               >
                 Your email
               </label>
               <input
-                id="email"
-                name="email"
+                id="from_email"
+                name="from_email"
                 type="email"
                 placeholder="eg. johndoe@example.com"
                 className="appearance-none border rounded w-full py-2 px-3 text-sm text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -95,19 +95,19 @@ const Contact = () => {
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="clientProject"
+                htmlFor="message"
               >
                 How can I help you?
               </label>
               <textarea
-                id="clientProject"
-                name="clientProject"
+                id="message"
+                name="message"
                 className="appearance-none border rounded w-full py-2 px-3 text-sm text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 rows={4}
                 placeholder=""
               ></textarea>
-              {formErrors.clientProject && (
-                <p className="text-red-500">{formErrors.clientProject}</p>
+              {formErrors.message && (
+                <p className="text-red-500">{formErrors.message}</p>
               )}
             </div>
 

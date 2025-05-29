@@ -2,6 +2,10 @@ export const info = {
   baseUrl: 'https://sayyedulawwab.com/',
   name: 'Muhammad Sayyedul Awwab',
   headline: 'Software Engineer | .NET Core | Aspiring Software Architect',
+  resume: {
+    url: '/assets/documents/Muhammad-Sayyedul-Awwab.pdf',
+    logo: '/assets/images/logo-download-resume.svg',
+  },
   socialMedia: {
     github: {
       url: 'https://github.com/sayyedulawwab',
