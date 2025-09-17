@@ -2,6 +2,29 @@
 import { info } from '../data/info';
 
 import Icon from './Icon.astro';
+
+const startDate = new Date('2022-09-07'); // your start date
+const today = new Date();
+
+let years = today.getFullYear() - startDate.getFullYear();
+let months = today.getMonth() - startDate.getMonth();
+
+// Adjust if the current month/day hasn't passed the start month/day yet
+if (months < 0 || (months === 0 && today.getDate() < startDate.getDate())) {
+  years -= 1;
+  months += 12;
+}
+
+if (today.getDate() < startDate.getDate()) {
+  months -= 1;
+}
+
+const experienceString =
+  years > 0
+    ? months > 0
+      ? `${years} year${years > 1 ? 's' : ''} ${months} month${months > 1 ? 's' : ''}`
+      : `${years} year${years > 1 ? 's' : ''}`
+    : `${months} month${months > 1 ? 's' : ''}`;
 ---
 
 <section id="hero" class="min-h-screen flex items-center justify-between">
@@ -14,8 +37,9 @@ import Icon from './Icon.astro';
 
     <div class="py-4 text-gray-800">
       <p class="mb-3">
-        <strong>Software Engineer</strong> with 2+ years of experience and passionate
-        about building scalable, reliable, maintainable and performant systems using
+        <strong>Software Engineer</strong> with {experienceString} of experience
+        and passionate about building scalable, reliable, maintainable and performant
+        systems using
         <strong
           >.NET Core, Clean Architecture, CQRS, Domain-Driven Design (DDD)
         </strong>etc.
