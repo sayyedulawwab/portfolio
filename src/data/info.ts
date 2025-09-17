@@ -75,16 +75,24 @@ export const info = {
 
   experience: [
     {
-      position: 'Software Engineer',
-      company: 'Echologyx Ltd.',
+      position: 'Senior Programmer',
+      company: 'Epyllion Group',
       location: 'Dhaka, Bangladesh',
-      startDate: 'Oct 2024',
+      startDate: 'July 2025',
       endDate: 'Present',
       description: '',
     },
     {
+      position: 'Software Engineer',
+      company: 'Echologyx Ltd.',
+      location: 'Dhaka, Bangladesh',
+      startDate: 'Oct 2024',
+      endDate: 'July 2025',
+      description: '',
+    },
+    {
       position: 'Junior Software Engineer',
-      company: 'Bdjobs.com Limited',
+      company: 'Bdjobs.com Ltd.',
       location: 'Dhaka, Bangladesh',
       startDate: 'Sep 2022',
       endDate: 'Sep 2024',
@@ -102,10 +110,10 @@ export const info = {
         title: 'JavaScript',
         logo: '/assets/images/logo-javascript.svg',
       },
-      // {
-      //   title: 'Python',
-      //   logo: '/assets/images/logo-python.svg',
-      // },
+      {
+        title: 'Python',
+        logo: '/assets/images/logo-python.svg',
+      },
       // {
       //   title: 'HTML',
       //   logo: '/assets/images/logo-html.svg',
@@ -161,6 +169,10 @@ export const info = {
       {
         title: 'GitHub',
         logo: '/assets/images/logo-github.svg',
+      },
+      {
+        title: 'Azure DevOps',
+        logo: '/assets/images/logo-azure.svg',
       },
       // {
       //   title: 'Visual Studio',
