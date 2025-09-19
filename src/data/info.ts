@@ -62,7 +62,7 @@ export const info = {
     {
       title: 'Job Posting System of Bdjobs.com',
       description:
-        'Contributed to the migration of The Job Posting system of Bdjobs.com Employer panel from legacy system to ASP.NET Core and Angular. built the API using ASP.NET Core following layered architecture in a team setting.',
+        'Contributed to the migration of The Job Posting system of Bdjobs.com Employer panel from legacy tech to ASP.NET Core and Angular. built the API using ASP.NET Core following Layered Architecture and Repository Pattern.',
       thumbnail: '/assets/images/recruiter-bdjobs-jobposting.webp',
       liveUrl: 'https://recruiter.bdjobs.com/jobposting/job-information',
       built_with: [
@@ -84,7 +84,7 @@ export const info = {
     },
     {
       position: 'Software Engineer',
-      company: 'Echologyx Ltd.',
+      company: 'Echologyx Ltd. UK',
       location: 'Dhaka, Bangladesh',
       startDate: 'Oct 2024',
       endDate: 'July 2025',
