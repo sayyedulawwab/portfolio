@@ -1,5 +1,4 @@
 ---
-import { markdown } from '@astropub/md';
 import { Image } from 'astro:assets';
 import { info } from '../data/info';
 ---
@@ -11,12 +10,9 @@ import { info } from '../data/info';
       info.recommendations.map(async recommendation => {
         return (
           <div class="rounded shadow-xl min-h-max p-3 hover:shadow-2xl transition-shadow duration-300">
-            {await markdown(
-              `<p class="text-sm text-gray-800 italic">
-                ${recommendation.description}
-              </p>`
-            )}
-
+            <p class="text-sm text-gray-800 italic">
+              {recommendation.description}
+            </p>
             <div class="flex items-center mt-4">
               <Image
                 src={recommendation.avatar}
