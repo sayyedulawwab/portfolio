@@ -31,7 +31,7 @@ const Contact = () => {
     }
   };
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const sendEmail = (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // // Check for EmailJS configuration

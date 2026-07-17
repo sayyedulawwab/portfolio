@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 
@@ -16,6 +17,7 @@ const { title, author, description, pageUrl } = Astro.props;
     <link rel="sitemap" href="/sitemap-index.xml" />
     <title>{title}</title>
     <script
+      is:inline
       type="text/partytown"
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-KNPHGYLQ36"></script>
