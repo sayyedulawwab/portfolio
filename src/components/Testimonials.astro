@@ -10,19 +10,23 @@ import { info } from '../data/info';
       info.recommendations.map(async recommendation => {
         return (
           <div class="rounded shadow-xl min-h-max p-3 hover:shadow-2xl transition-shadow duration-300">
-            <p class="text-sm text-gray-800 italic">
-              {recommendation.description}
-            </p>
+            <blockquote class="p-4 my-4 border-s-4 border-gray-300 bg-gray-50">
+              {recommendation.description.map(paragraph => (
+                <p class="text-md italic font-medium leading-relaxed text-gray-900 mb-4 last:mb-0">
+                  {paragraph}
+                </p>
+              ))}
+            </blockquote>
             <div class="flex items-center mt-4">
               <Image
                 src={recommendation.avatar}
                 alt={recommendation.name}
-                class="w-12 h-12 rounded-full mr-4"
-                width="325"
-                height="160"
+                class="w-12 h-12 rounded-full object-cover mr-4"
+                width={96}
+                height={96}
               />
               <div>
-                <p class="text-gray-800 text-sm font-semibold">
+                <p class="text-gray-800 text-sm font-bold">
                   {recommendation.name}
                 </p>
                 <p class="text-gray-500 text-sm">{recommendation.headline}</p>

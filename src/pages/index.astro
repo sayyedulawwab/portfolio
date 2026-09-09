@@ -8,7 +8,8 @@ import Skills from '../components/Skills.astro';
 import Testimonials from '../components/Testimonials.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'sayyedulawwab | portfolio';
+const title =
+  'Muhammad Sayyedul Awwab — Software Engineer | .NET Core | Talks about backend and software architecture';
 const author = 'Muhammad Sayyedul Awwab';
 const description =
   'Software Engineer passionate about building scalable, reliable, maintainable and performant systems using .NET Core. Talks about backend and software architecture.';
@@ -27,5 +28,5 @@ const pageUrl = '';
   <Skills />
   <RecentArticles />
   <Testimonials />
-  <Contact client:load />
+  <Contact client:visible />
 </BaseLayout>
