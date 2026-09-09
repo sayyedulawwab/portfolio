@@ -1,7 +1,5 @@
 ---
-import { Image } from 'astro:assets';
-
 const { src, alt } = Astro.props;
 ---
 
-<Image src={src} alt={alt} class="w-8 h-8 py-1" width="325" height="160" />
+<img src={src} alt={alt} class="w-8 h-8 object-contain" />

@@ -1,6 +1,6 @@
 ---
+import { Image } from 'astro:assets';
 import { info } from '../data/info';
-
 import Icon from './Icon.astro';
 
 const startDate = new Date('2022-09-07'); // your start date
@@ -28,8 +28,14 @@ const experienceString =
 ---
 
 <section id="hero" class="min-h-screen flex items-center justify-between">
-  <!-- <img src="/assets/images/propic.png" alt="profile" /> -->
   <div>
+    <Image
+      src={'/assets/images/propic.jpg'}
+      alt={'profile'}
+      width={200}
+      height={200}
+      class="rounded-full -rotate-90"
+    />
     <p>
       <strong>Hi 👋 I'm</strong>
     </p>
@@ -39,10 +45,9 @@ const experienceString =
       <p class="mb-3">
         <strong>Software Engineer</strong> with {experienceString} of experience
         and passionate about building scalable, reliable, maintainable and performant
-        systems using
-        <strong
-          >.NET Core, Clean Architecture, CQRS, Domain-Driven Design (DDD)
-        </strong>etc.
+        systems using <strong>
+          .NET Core, Clean Architecture, CQRS, Domain-Driven Design (DDD)
+        </strong>, etc.
       </p>
       <p>
         Eager to excel in the software engineering track, I aspire to evolve
