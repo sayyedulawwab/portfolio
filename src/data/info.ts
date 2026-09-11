@@ -26,17 +26,14 @@ export const info = {
   location: 'Dhaka, Bangladesh',
   careerStart: '2022-09-07',
 
-  /** What I build. Broad by default; the domain is marked as history, not identity. */
   positioning:
-    'I build backend systems — the APIs, the data models, and the logic underneath them. Most of my work so far has been business software, where the difficulty comes from the number of rules and exceptions rather than from traffic.',
+    'I build backend systems — the APIs, the data models, and the business rules underneath them.',
 
-  /** Direction. Widening the range of problems, and the longer-term architecture goal. */
   direction:
-    'I want to keep widening that: systems where the pressure comes from scale and performance as much as from complexity. Longer term I am working toward software architecture — designing systems that stay reliable and maintainable as they grow, and guiding teams through those decisions.',
+    'I am working toward software architecture and technical leadership — designing systems that stay reliable and maintainable as they grow, and guiding teams through those decisions.',
 
-  /** The line that turns the page toward the reader. */
   invitation:
-    'If you build systems too — whether you are starting out or years ahead of me — or you are hiring and this looks relevant, I would like to hear from you.',
+    'If you build systems too or you are hiring and this looks relevant, I would like to hear from you.',
 
   resume: {
     url: '/assets/documents/Muhammad-Sayyedul-Awwab.pdf',
