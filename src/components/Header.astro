@@ -1,24 +1,51 @@
 ---
+import { site } from '../data/info';
 
+const path = Astro.url.pathname;
+const onHome = path === '/' || path === '';
+
+const links = onHome
+  ? [
+      { href: '#work', label: 'Work' },
+      { href: '#experience', label: 'Experience' },
+      { href: '#writing', label: 'Writing' },
+      { href: '/about/', label: 'About' },
+      { href: '#contact', label: 'Contact' },
+    ]
+  : [
+      { href: '/', label: 'Home' },
+      { href: '/blog/', label: 'Writing' },
+      { href: '/about/', label: 'About' },
+    ];
 ---
 
-<header class="w-4/5 mx-auto text-lg py-2">
-  <nav class="flex justify-between">
-    <div>
-      <a href="/">
-        <strong>Muhammad Sayyedul Awwab</strong>
-      </a>
-      <div>
-        <div></div>
-      </div>
-    </div>
-    <ul class="flex">
-      <li>
-        <a href="/" class="px-2">Home</a>
-      </li>
-      <li>
-        <a href="/blog" class="px-2">Blog</a>
-      </li>
+<header
+  class="sticky top-0 z-40 border-b border-rule bg-bg/90 backdrop-blur supports-backdrop-filter:bg-bg/75"
+>
+  <nav
+    aria-label="Primary"
+    class="max-w-5xl mx-auto px-5 sm:px-8 h-14 flex items-center justify-between gap-6"
+  >
+    <a href="/" class="font-semibold tracking-tight text-[15px] shrink-0">
+      {site.shortName}
+    </a>
+
+    <ul
+      class="flex items-center gap-4 sm:gap-6 text-sm text-muted overflow-x-auto"
+    >
+      {
+        links.map(link => (
+          <li>
+            <a
+              href={link.href}
+              class="hover:text-fg transition-colors whitespace-nowrap"
+              aria-current={path === link.href ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </header>

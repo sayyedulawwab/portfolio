@@ -3,8 +3,6 @@ title: 'Leveraging Vertical Slice Architecture with Clean Architecture for Scala
 publishedOn: '2024-12-20'
 slug: 'leveraging-vertical-slice-architecture-with-clean-architecture-for-scalable-maintainable-systems'
 metaDescription: 'Leveraging Vertical Slice Architecture with Clean Architecture for Scalable, Maintainable Systems'
-setup: |
-  import { Picture } from "astro-imagetools/components";
 ---
 
 ## Introduction
@@ -120,13 +118,13 @@ Ultimately, there’s no one-size-fits-all solution. The key is to adapt your ar
 ## References
 
 <ul>
-  <li class="break-words">
+  <li class="wrap-break-word">
     Ecommerce Microservices GitHub Repository —
     <a href="https://github.com/sayyedulawwab/EcommerceMicroservices" target="_blank">
       https://github.com/sayyedulawwab/EcommerceMicroservices
     </a>
   </li>
-  <li class="break-words">
+  <li class="wrap-break-word">
     Previous article — First attempt to build Microservice-Based API with .NET Core, Clean Architecture, and DDD —
     <a href="https://sayyedulawwab.com/blog/first-attempt-to-build-microservice-based-ecommerce-api-with-net-core-clean-architecture-and-ddd/" target="_blank">
       https://sayyedulawwab.com/blog/first-attempt-to-build-microservice-based-ecommerce-api-with-net-core-clean-architecture-and-ddd/

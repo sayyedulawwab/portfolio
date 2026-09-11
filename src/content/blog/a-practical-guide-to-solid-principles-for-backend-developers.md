@@ -3,8 +3,6 @@ title: 'A Practical Guide to SOLID Principles for Backend Developers'
 publishedOn: '2025-01-28'
 slug: 'a-practical-guide-to-solid-principles-for-backend-developers'
 metaDescription: 'Learn to apply the SOLID principles in backend development with practical C# examples for clean, scalable, and maintainable code.'
-setup: |
-  import { Picture } from "astro-imagetools/components";
 ---
 
 These five software development principles are guidelines to follow when building software so that it is easier to scale and maintain. They were made popular by a software engineer, [Robert C. Martin](https://en.wikipedia.org/wiki/Robert_C._Martin).

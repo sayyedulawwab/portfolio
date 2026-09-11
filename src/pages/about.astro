@@ -1,0 +1,157 @@
+---
+import { info } from '../data/info';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'About';
+const description =
+  'Muhammad Sayyedul Awwab — backend software engineer in Dhaka building systems in .NET Core, working toward software architecture and system design.';
+---
+
+<BaseLayout title={title} description={description} pageUrl="/about/">
+  <div class="py-16">
+    <div class="article">
+      <h1 class="text-3xl font-semibold tracking-tight">About</h1>
+
+      <div class="mt-8 flex items-start gap-5">
+        <img
+          src="/assets/images/propic.jpg"
+          alt="Muhammad Sayyedul Awwab"
+          width="96"
+          height="96"
+          decoding="async"
+          class="size-24 rounded-full object-cover border border-rule shrink-0"
+        />
+        <p class="text-[17px] leading-relaxed pt-1">
+          I am a {info.role.toLowerCase()} based in {info.location}.
+        </p>
+      </div>
+
+      <!--
+        ORIGIN — adapted from your own LinkedIn About. Nothing added.
+        Source: "My software engineering journey began with a childhood
+        fascination for computers, sparked by gaming. Using platforms like
+        Google, Facebook, and YouTube fueled my curiosity about how the web
+        worked and how these systems are built. During my Bachelor's, this
+        curiosity evolved into a passion for a career in Software Engineering."
+      -->
+      <h2 class="mt-14 text-xl font-semibold tracking-tight">
+        How I got here
+      </h2>
+      <div class="mt-4 space-y-5 text-[17px] leading-relaxed">
+        <p>
+          It started with games. I was fascinated by computers as a child, and
+          the more I used things like Google, Facebook and YouTube, the more I
+          wanted to know what was behind them — how the web actually worked,
+          and how systems at that size get built at all. During my
+          Bachelor&rsquo;s that curiosity turned into the thing I wanted to do
+          for a living.
+        </p>
+        <p>
+          I still think it is the most interesting question in the job. Every
+          system I have worked on is somebody&rsquo;s answer to it, and the
+          answers are never obvious.
+        </p>
+      </div>
+
+      <!--
+        WORK — the domain is stated as history ("so far"), not as identity, and
+        no employer is named, so this stays true across job changes.
+      -->
+      <h2 class="mt-14 text-xl font-semibold tracking-tight">What I build</h2>
+      <div class="mt-4 space-y-5 text-[17px] leading-relaxed">
+        <p>
+          I build backend systems — the APIs, the data models, and the logic
+          underneath them. Most of my professional work so far has been
+          business software: HR and payroll platforms, recruitment systems, and
+          internal applications a company depends on to operate.
+        </p>
+        <p>
+          That kind of system has its own shape of difficulty. It is usually
+          not traffic; it is the number of rules, the number of exceptions to
+          those rules, and how much of an organisation depends on getting them
+          right. A payroll calculation that is wrong for one department is a
+          different kind of failure from a slow page, and it has taught me to
+          treat correctness and clarity as design goals rather than
+          afterthoughts.
+        </p>
+        <p>
+          I do not want that to be the only kind of system I know how to build.
+          The problems that come from scale interest me just as much —
+          throughput and latency, distribution, keeping state consistent across
+          services — and that is where most of my own projects and reading go.
+        </p>
+        <p>
+          The work has mostly been in .NET Core over SQL Server, with Clean
+          Architecture, CQRS and Domain-Driven Design, alongside a fair amount
+          of legacy modernisation.{' '}
+          <a
+            href="/#experience"
+            class="underline underline-offset-4 hover:text-accent"
+          >
+            Where I have done it is on the home page
+          </a>.
+        </p>
+      </div>
+
+      <!--
+        DIRECTION — adapted from your LinkedIn "I strive to" list.
+        Frontend deliberately left out per your positioning rule.
+      -->
+      <h2 class="mt-14 text-xl font-semibold tracking-tight">
+        What I am working toward
+      </h2>
+      <ul class="mt-4 space-y-4 text-[17px] leading-relaxed">
+        <li>
+          <span class="font-medium">Backend depth.</span> Designing systems that
+          are scalable, reliable, maintainable and performant — and understanding
+          why a design holds when it is put under pressure.
+        </li>
+        <li>
+          <span class="font-medium">A wider range of problems.</span> Systems where
+          the pressure comes from scale and performance, not only from business complexity.
+        </li>
+        <li>
+          <span class="font-medium">A software architect role.</span> Guiding teams
+          and owning the design decisions rather than only implementing them. I am
+          not there yet; this is the direction I am deliberately heading in.
+        </li>
+        <li>
+          <span class="font-medium">Sharing what I learn.</span> Through writing,
+          and through helping other engineers where I can.
+        </li>
+      </ul>
+
+      <h2 class="mt-14 text-xl font-semibold tracking-tight">Why I write</h2>
+      <div class="mt-4 space-y-5 text-[17px] leading-relaxed">
+        <p>
+          Writing is how I find out whether I actually understand something. If
+          I cannot explain why a decision was made and what it cost, I did not
+          understand the decision. Putting it in public also means the
+          reasoning can be checked by people who know more than I do.
+        </p>
+        <p>
+          Most of what I publish is about .NET Core, architecture patterns,
+          databases and performance.{' '}
+          <a
+            href="/blog/"
+            class="underline underline-offset-4 hover:text-accent"
+          >
+            You can read it here
+          </a>.
+        </p>
+      </div>
+
+      <h2 class="mt-14 text-xl font-semibold tracking-tight">Get in touch</h2>
+      <p class="mt-4 text-[17px] leading-relaxed">{info.invitation}</p>
+
+      <p class="mt-8">
+        <a
+          href="/#contact"
+          class="inline-flex items-center bg-fg text-bg px-5 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity"
+        >
+          Send me a message
+        </a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>

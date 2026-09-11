@@ -1,0 +1,76 @@
+---
+import { info } from '../data/info';
+
+/**
+ * Netlify Forms. No JavaScript, no public API key, spam filtering included.
+ *
+ * Requirements:
+ *  - the site must be built statically (output: 'static') so Netlify can
+ *    detect the form markup at deploy time;
+ *  - "Form detection" must be enabled in Netlify → Project configuration → Forms.
+ */
+const field =
+  'mt-1.5 w-full border border-rule bg-bg px-3 py-2 text-[15px] placeholder:text-muted/70';
+const labelClass = 'block text-sm font-medium';
+---
+
+<section id="contact" class="scroll-mt-20 py-16 border-t border-rule">
+  <h2 class="text-xl font-semibold tracking-tight">Get in touch</h2>
+  <p class="mt-2 article text-muted">
+    Hiring, a system you want a second opinion on, or something you read here —
+    all welcome. You can also reach me directly at{' '}
+    <a
+      href={info.socialMedia.email.url}
+      class="text-fg underline underline-offset-4 hover:text-accent"
+    >
+      sayyedulawwab@gmail.com
+    </a>.
+  </p>
+
+  <form
+    name="contact"
+    method="POST"
+    action="/thanks/"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    class="mt-8 max-w-md space-y-5"
+  >
+    <input type="hidden" name="form-name" value="contact" />
+
+    <p class="hidden" aria-hidden="true">
+      <label>
+        Leave this field empty
+        <input name="bot-field" tabindex="-1" autocomplete="off" />
+      </label>
+    </p>
+
+    <div>
+      <label class={labelClass} for="name">Your name</label>
+      <input id="name" name="name" type="text" required autocomplete="name" class={field} />
+    </div>
+
+    <div>
+      <label class={labelClass} for="email">Your email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        autocomplete="email"
+        class={field}
+      />
+    </div>
+
+    <div>
+      <label class={labelClass} for="message">What can I help with?</label>
+      <textarea id="message" name="message" rows="5" required class={field}></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="bg-fg text-bg px-5 py-2.5 text-sm font-medium hover:opacity-90 transition-opacity"
+    >
+      Send message
+    </button>
+  </form>
+</section>

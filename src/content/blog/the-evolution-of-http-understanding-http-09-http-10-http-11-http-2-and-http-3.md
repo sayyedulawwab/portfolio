@@ -3,8 +3,6 @@ title: 'The Evolution of HTTP - Understanding HTTP 0.9, HTTP 1.0, HTTP 1.1, HTTP
 publishedOn: '2025-02-02'
 slug: 'the-evolution-of-http-understanding-http-09-http-10-http-11-http-2-and-http-3'
 metaDescription: 'Learn everything about HTTP, from its early versions (HTTP/0.9, HTTP/1.0, HTTP/1.1) to modern advancements like HTTP/2 and HTTP/3. Understand key features, improvements, and how HTTP powers the web today.'
-setup: |
-  import { Picture } from "astro-imagetools/components";
 ---
 
 **Hypertext Transfer Protocol (HTTP)** is an application-layer protocol for transmitting hypermedia documents, such as **HTML pages, text, images, videos**, and much more. It was designed for communication between **web browsers and web servers**, but it can also be used for other purposes, such as **machine-to-machine communication, programmatic access to APIs,** and more.

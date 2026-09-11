@@ -275,7 +275,7 @@ While this project currently implements basic features like CRUD operations, use
 ## References
 
 <ul>
-  <li class="break-words">
+  <li class="wrap-break-word">
     GitHub Repository —
     <a href="https://github.com/sayyedulawwab/EcommerceMicroservices" target="_blank">
       https://github.com/sayyedulawwab/EcommerceMicroservices

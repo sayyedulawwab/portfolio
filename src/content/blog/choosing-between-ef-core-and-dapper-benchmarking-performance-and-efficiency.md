@@ -132,7 +132,7 @@ For high-performance cases needing rapid execution and low memory use, Dapper is
 ## Reference
 
 <ul>
-  <li class="break-words">
+  <li class="wrap-break-word">
     GitHub Repository —
     <a href="https://github.com/sayyedulawwab/EFCoreVsDapper" target="_blank">
       https://github.com/sayyedulawwab/EFCoreVsDapper

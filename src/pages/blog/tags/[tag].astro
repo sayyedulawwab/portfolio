@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostList from '../../../components/PostList.astro';
+import { getAllTags, getPosts, tagSlug, type Post } from '../../../lib/posts';
+
+interface Props {
+  tag: string;
+  posts: Post[];
+}
+
+export async function getStaticPaths() {
+  const [posts, tags] = await Promise.all([getPosts(), getAllTags()]);
+
+  return tags.map(({ tag }) => ({
+    params: { tag: tagSlug(tag) },
+    props: {
+      tag,
+      posts: posts.filter(post => post.data.tags.includes(tag)),
+    },
+  }));
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<BaseLayout
+  title={`Articles on ${tag}`}
+  description={`Articles by Muhammad Sayyedul Awwab on ${tag} — ${posts.length} written so far.`}
+  pageUrl={`/blog/tags/${tagSlug(tag)}/`}
+>
+  <div class="py-16">
+    <nav aria-label="Breadcrumb" class="text-sm text-muted">
+      <a href="/blog/" class="underline underline-offset-4 hover:text-accent">
+        Writing
+      </a>
+    </nav>
+
+    <h1 class="mt-6 text-3xl font-semibold tracking-tight">{tag}</h1>
+    <p class="mt-2 text-muted">
+      {posts.length} article{posts.length === 1 ? '' : 's'}
+    </p>
+
+    <div class="mt-10">
+      <PostList posts={posts} />
+    </div>
+  </div>
+</BaseLayout>

@@ -3,8 +3,6 @@ title: 'Introduction to GoF Design Patterns – What They Are, When to Use with 
 publishedOn: '2025-06-18'
 slug: 'introduction-to-gof-design-patterns-what-they-are-when-to-use-with-github-examples'
 metaDescription: 'A beginner-friendly introduction to the 23 Gang of Four (GoF) design patterns with clear explanations of what they are, when to use them, and GitHub links to practical backend-focused C# examples.'
-setup: |
-  import { Picture } from "astro-imagetools/components";
 ---
 
 Design patterns are time-tested, battle-hardened solutions to recurring design problems in software engineering. They help you write cleaner, more maintainable, and more scalable code by providing a shared language and best practices for solving architectural and structural challenges.
