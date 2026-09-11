@@ -6,7 +6,7 @@ import { info } from '../data/info';
   <div class="grid gap-8 sm:grid-cols-[1fr_auto] sm:gap-12 sm:items-start">
     <div>
       <h1
-        class="article text-[1.6rem] leading-tight sm:text-[2.1rem] sm:leading-[1.2] font-semibold tracking-tight text-balance"
+        class="text-[1.6rem] leading-tight sm:text-[2.1rem] sm:leading-[1.2] font-semibold tracking-tight text-balance"
       >
         Hi, I&rsquo;m {info.name}.
       </h1>
@@ -23,7 +23,7 @@ import { info } from '../data/info';
       height="160"
       fetchpriority="high"
       decoding="async"
-      class="size-36 sm:size-40 rounded-full object-cover border border-rule order-first sm:order-0"
+      class="size-36 sm:size-40 rounded-full object-cover border border-rule order-first sm:order-none"
     />
   </div>
 
@@ -40,11 +40,8 @@ import { info } from '../data/info';
     >
       Say hello
     </a>
-    <a
-      href="#experience"
-      class="underline underline-offset-4 hover:text-accent"
-    >
-      What I work on
+    <a href="/blog/" class="underline underline-offset-4 hover:text-accent">
+      Writing
     </a>
     <a
       href={info.resume.url}
