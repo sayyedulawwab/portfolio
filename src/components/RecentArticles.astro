@@ -1,45 +1,24 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
-const allPosts = (await getCollection('blog'))
-  .sort(
-    (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
-      new Date(b.data.publishedOn + 'T00:00:00').getTime() -
-      new Date(a.data.publishedOn + 'T00:00:00').getTime()
-  )
-  // .filter(
-  //   (post: CollectionEntry<'blog'>) =>
-  //     new Date(post.data.publishedOn + 'T00:00:00').getTime() <=
-  //     new Date().getTime()
-  // )
-  .slice(0, 4);
-function formatDate(date: string): string {
-  const options: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  };
+import PostList from './PostList.astro';
+import { getPosts } from '../lib/posts';
 
-  return new Date(date).toLocaleDateString(undefined, options);
-}
+const posts = (await getPosts()).slice(0, 5);
 ---
 
-<section id="articles" class="mb-10">
-  <h2 class="font-bold text-2xl">Recent Articles</h2>
-  <div class="grid grid-cols-1 gap-6">
-    {
-      allPosts.map(post => (
-        <a href={`/blog/${post.id}/`} class="text-gray-800">
-          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">
-              {post.data.title}
-            </h3>
+<section id="writing" class="scroll-mt-20 py-16 border-t border-rule">
+  <div class="flex items-baseline justify-between gap-6">
+    <h2 class="text-xl font-semibold tracking-tight">Writing</h2>
+    <a href="/blog/" class="text-sm underline underline-offset-4 hover:text-accent">
+      All articles
+    </a>
+  </div>
 
-            <p class="text-gray-600 text-sm">
-              {formatDate(post.data.publishedOn)}
-            </p>
-          </div>
-        </a>
-      ))
-    }
+  <p class="mt-2 article text-muted">
+    Notes on architecture decisions, measurement, and the things that go wrong in
+    production.
+  </p>
+
+  <div class="mt-8">
+    <PostList posts={posts} headingLevel={3} />
   </div>
 </section>

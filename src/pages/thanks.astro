@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Message sent"
+  description="Your message has been sent to Muhammad Sayyedul Awwab."
+  pageUrl="/thanks/"
+  noindex
+>
+  <div class="py-24 article">
+    <h1 class="text-3xl font-semibold tracking-tight">Message sent</h1>
+    <p class="mt-4 text-lg text-muted">
+      Thanks for reaching out. I read everything and usually reply within a
+      couple of days.
+    </p>
+    <p class="mt-8 flex gap-6 text-sm">
+      <a href="/" class="underline underline-offset-4 hover:text-accent">
+        Back to home
+      </a>
+      <a href="/blog/" class="underline underline-offset-4 hover:text-accent">
+        Read something while you wait
+      </a>
+    </p>
+  </div>
+</BaseLayout>

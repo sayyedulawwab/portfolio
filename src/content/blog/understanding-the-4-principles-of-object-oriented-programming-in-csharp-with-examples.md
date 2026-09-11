@@ -3,8 +3,6 @@ title: 'Understanding the 4 Principles of Object-Oriented Programming in C# with
 publishedOn: '2025-01-24'
 slug: 'understanding-the-4-principles-of-object-oriented-programming-in-csharp-with-examples'
 metaDescription: 'Learn the four principles of Object-Oriented Programming—Encapsulation, Abstraction, Inheritance, and Polymorphism—explained with clear C# examples. Perfect for beginners to strengthen their programming foundations!'
-setup: |
-  import { Picture } from "astro-imagetools/components";
 ---
 
 In this article, I am going to talk about what the four principles of Object-Oriented Programming (Encapsulation, Abstraction, Inheritance and Polymorphism) stand for with some practical examples.

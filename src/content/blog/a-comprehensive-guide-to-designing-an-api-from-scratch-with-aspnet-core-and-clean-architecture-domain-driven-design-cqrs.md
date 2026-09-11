@@ -3,8 +3,6 @@ title: 'A Comprehensive Guide to Designing an API from Scratch with ASP.NET Core
 publishedOn: '2024-09-10'
 slug: 'a-comprehensive-guide-to-designing-an-api-from-scratch-with-aspnet-core-and-clean-architecture-domain-driven-design-cqrs'
 metaDescription: 'A Comprehensive Guide to Designing an API from Scratch with ASP.NET Core and Clean Architecture, Domain Driven Design (DDD), CQRS'
-setup: |
-  import { Picture } from "astro-imagetools/components";
 ---
 
 Designing a robust API involves balancing scalability, maintainability, and best practices. In this guide, I share my experience of building an API from scratch using ASP.NET Core, Clean Architecture, Domain-Driven Design (DDD), and Command Query Responsibility Segregation (CQRS).
@@ -529,19 +527,19 @@ Designing an API using ASP.NET Core, Clean Architecture, DDD, and CQRS provides 
 For further exploring, check out:
 
 <ul>
-  <li class="break-words">
+  <li class="wrap-break-word">
     How To Approach Clean Architecture Folder Structure —
     <a href="https://www.milanjovanovic.tech/blog/clean-architecture-folder-structure" target="_blank">
       https://www.milanjovanovic.tech/blog/clean-architecture-folder-structure
     </a>
   </li>
-  <li class="break-words">
+  <li class="wrap-break-word">
     Milan Jovanović - 
     <a href="https://www.youtube.com/@MilanJovanovicTech" target="_blank">
       https://www.youtube.com/@MilanJovanovicTech
     </a>
   </li>
-  <li class="break-words">
+  <li class="wrap-break-word">
     My Ecommerce API Project - 
     <a href="https://github.com/sayyedulawwab/EcommerceApp" target="_blank">
       https://github.com/sayyedulawwab/EcommerceApp

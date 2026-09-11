@@ -2,104 +2,198 @@
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { info } from '../data/info';
+import { info, site } from '../data/info';
 
-const { title, author, description, pageUrl } = Astro.props;
+interface Props {
+  /** Page-specific title. The site name is appended automatically. */
+  title: string;
+  description: string;
+  /** Path only, e.g. '/blog/'. Canonical is built from Astro.site. */
+  pageUrl?: string;
+  /** Absolute or site-relative OG image. Falls back to the default card. */
+  image?: string;
+  /** Set for blog posts so article metadata and BlogPosting JSON-LD are emitted. */
+  article?: {
+    publishedTime: string;
+    modifiedTime?: string;
+    tags?: readonly string[];
+  };
+  /** Keep utility pages (form success, etc.) out of the index. */
+  noindex?: boolean;
+}
 
-const canonicalUrl = `https://sayyedulawwab.com${pageUrl}`;
+const {
+  title,
+  description,
+  pageUrl = '/',
+  image = '/og-image.png',
+  article,
+  noindex = false,
+} = Astro.props;
+
+const base = Astro.site ?? new URL(site.url);
+const canonical = new URL(pageUrl, base).href;
+const ogImage = new URL(image, base).href;
+const fullTitle = pageUrl === '/' ? title : `${title} — ${site.shortName}`;
+
+const person = {
+  '@type': 'Person',
+  '@id': `${site.url}/#person`,
+  name: info.name,
+  jobTitle: info.experience[0].position,
+  url: `${site.url}/`,
+  image: new URL('/assets/images/propic.jpg', base).href,
+  description: info.positioning,
+  knowsAbout: [
+    'Backend engineering',
+    '.NET Core',
+    'C#',
+    'REST APIs',
+    'SQL Server',
+    'Clean Architecture',
+    'CQRS',
+    'Domain-Driven Design',
+    'Microservices',
+  ],
+  sameAs: [
+    info.socialMedia.github.url,
+    info.socialMedia.linkedin.url,
+    info.socialMedia.medium.url,
+  ],
+  worksFor: { '@type': 'Organization', name: info.experience[0].company },
+};
+
+const graph: Record<string, unknown>[] = [
+  person,
+  {
+    '@type': 'WebSite',
+    '@id': `${site.url}/#website`,
+    url: `${site.url}/`,
+    name: site.name,
+    publisher: { '@id': `${site.url}/#person` },
+    inLanguage: 'en',
+  },
+];
+
+if (article) {
+  graph.push({
+    '@type': 'BlogPosting',
+    headline: title,
+    description,
+    image: ogImage,
+    datePublished: article.publishedTime,
+    dateModified: article.modifiedTime ?? article.publishedTime,
+    author: { '@id': `${site.url}/#person` },
+    publisher: { '@id': `${site.url}/#person` },
+    mainEntityOfPage: canonical,
+    keywords: article.tags?.join(', '),
+  });
+  graph.push({
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Writing', item: `${site.url}/blog/` },
+      { '@type': 'ListItem', position: 3, name: title, item: canonical },
+    ],
+  });
+}
+
+const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="theme-color"
-      content="#ffffff"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta
-      name="theme-color"
-      content="#0f172a"
-      media="(prefers-color-scheme: dark)"
-    />
 
-    <meta name="author" content={author} />
+    <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <meta name="author" content={info.name} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
-    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title={`${site.name} — writing`}
+      href={new URL('/rss.xml', base).href}
+    />
+
+    <meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:locale" content={site.locale} />
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalUrl} />
-    <meta
-      property="og:image"
-      content={new URL('/og-image.png', info.baseUrl).href}
-    />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-
-    <!-- Twitter/X -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta
-      name="twitter:image"
-      content={new URL('/og-image.png', info.baseUrl).href}
-    />
-
-    <title>{title}</title>
-
-    <!-- Person structured data -->
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Person',
-        name: 'Muhammad Sayyedul Awwab',
-        jobTitle: 'Software Engineer',
-        url: canonicalUrl,
-        sameAs: [
-          'https://github.com/sayyedulawwab',
-          'https://www.linkedin.com/in/sayyedulawwab',
-          'https://medium.com/@sayyedulawwab',
-        ],
-        worksFor: {
-          '@type': 'Organization',
-          name: 'Epyllion Group',
-        },
-      })}
-    />
-
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-    <script
-      is:inline
-      type="text/partytown"
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-KNPHGYLQ36"></script>
-  </head>
-  <!-- Google tag (gtag.js) -->
-  <script is:inline type="text/partytown">
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
+    {
+      article && (
+        <>
+          <meta property="article:published_time" content={article.publishedTime} />
+          <meta property="article:author" content={info.socialMedia.linkedin.url} />
+          {article.modifiedTime && (
+            <meta property="article:modified_time" content={article.modifiedTime} />
+          )}
+          {article.tags?.map(tag => <meta property="article:tag" content={tag} />)}
+        </>
+      )
     }
-    gtag('js', new Date());
 
-    gtag('config', 'G-KNPHGYLQ36');
-  </script>
-  <body>
+    <!-- X / Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+
+    {
+      site.analyticsId && (
+        <>
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+          <script
+            is:inline
+            defer
+            src={`https://www.googletagmanager.com/gtag/js?id=${site.analyticsId}`}
+          />
+          <script is:inline define:vars={{ gaId: site.analyticsId }}>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', gaId);
+          </script>
+        </>
+      )
+    }
+  </head>
+
+  <body class="min-h-screen flex flex-col antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-fg focus:text-bg focus:px-4 focus:py-2"
+    >
+      Skip to content
+    </a>
+
     <Header />
-    <main class="w-4/5 mx-auto text-lg my-8">
+
+    <main id="main" class="flex-1 w-full max-w-5xl mx-auto px-5 sm:px-8">
       <slot />
     </main>
+
     <Footer />
   </body>
 </html>

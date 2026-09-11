@@ -1,39 +1,39 @@
 ---
-import { info } from "../data/info";
-import Icon from "./Icon.astro";
+import { info } from '../data/info';
 
-const currentYear = new Date().getFullYear();
+const year = new Date().getFullYear();
+const links = [
+  info.socialMedia.github,
+  info.socialMedia.linkedin,
+  info.socialMedia.medium,
+  info.socialMedia.email,
+];
 ---
 
-<footer class="py-10 bg-slate-200">
-  <section class="flex justify-evenly text-center">
-    <div class="flex flex-col items-center">
-      <p>Find me on</p>
+<footer class="border-t border-rule mt-24">
+  <div
+    class="max-w-5xl mx-auto px-5 sm:px-8 py-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 text-sm text-muted"
+  >
+    <p>&copy; {year} {info.name}</p>
 
-      <a
-        href={info.socialMedia.linkedin.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon src={info.socialMedia.linkedin.logo} alt="LinkedIn" />
-      </a>
-    </div>
-    <div class="flex flex-col items-center">
-      <p>Mail me at</p>
-      <a
-        href={info.socialMedia.email.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon src={info.socialMedia.email.logo} alt="Email" />
-      </a>
-    </div>
-  </section>
-
-  <p class="text-center">
-    &copy; {currentYear} All rights reserved | Made by{" "}
-    <a href="/">
-      <strong>Muhammad Sayyedul Awwab</strong>
-    </a>
-  </p>
+    <ul class="flex flex-wrap gap-x-5 gap-y-2">
+      {
+        links.map(link => (
+          <li>
+            <a
+              href={link.url}
+              rel="noopener noreferrer me"
+              target={link.url.startsWith('mailto:') ? undefined : '_blank'}
+              class="hover:text-fg transition-colors"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+      <li>
+        <a href="/rss.xml" class="hover:text-fg transition-colors">RSS</a>
+      </li>
+    </ul>
+  </div>
 </footer>

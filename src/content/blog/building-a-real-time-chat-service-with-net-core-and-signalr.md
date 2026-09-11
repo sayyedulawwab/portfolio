@@ -3,8 +3,6 @@ title: 'Building a Real-Time Chat Service with .NET Core and SignalR'
 publishedOn: '2024-12-14'
 slug: 'building-a-real-time-chat-service-with-net-core-and-signalr'
 metaDescription: 'Building a Real-Time Chat Service with .NET Core and SignalR'
-setup: |
-  import { Picture } from "astro-imagetools/components";
 ---
 
 ## Introduction
@@ -573,15 +571,15 @@ const handleTyping = () => {
 ## Key Takeaways
 
 - **Ease of Real-Time Implementation with SignalR**  
-   SignalR simplifies adding real-time functionality to applications by leveraging WebSockets and providing fallback options for older browsers or constrained environments. Its flexibility makes it an excellent choice for building chat applications.
+  SignalR simplifies adding real-time functionality to applications by leveraging WebSockets and providing fallback options for older browsers or constrained environments. Its flexibility makes it an excellent choice for building chat applications.
 
 - **Scalable and Secure Backend Design**  
-   The implementation demonstrated how to use JWT authentication for secure user access, SignalR Hubs for real-time communication, and Redis for caching to support scalability.
+  The implementation demonstrated how to use JWT authentication for secure user access, SignalR Hubs for real-time communication, and Redis for caching to support scalability.
 
 - **Practical API Design**  
-   By structuring endpoints for user authentication, room management, and messaging, the backend provides a clean interface that can be easily consumed by frontend applications.
+  By structuring endpoints for user authentication, room management, and messaging, the backend provides a clean interface that can be easily consumed by frontend applications.
 - **Integration of Frontend with Backend**  
-   Using ReactJS as the frontend demonstrates how SignalR seamlessly connects the user interface with the backend for real-time updates and messaging.
+  Using ReactJS as the frontend demonstrates how SignalR seamlessly connects the user interface with the backend for real-time updates and messaging.
 
 ## Future Enhancements
 
@@ -616,19 +614,19 @@ This article covered the foundational steps to build a real-time chat applicatio
 ## Reference
 
 <ul>
-  <li class="break-words">
+  <li class="wrap-break-word">
     Chat Service (Backend) GitHub Repository - 
     <a href="https://github.com/sayyedulawwab/ChatService" target="_blank">
       https://github.com/sayyedulawwab/ChatService
     </a>
   </li>
-  <li class="break-words">
+  <li class="wrap-break-word">
     Chat Client (Frontend) GitHub Repository - 
     <a href="https://github.com/sayyedulawwab/ChatClient" target="_blank">
       https://github.com/sayyedulawwab/ChatClient
     </a>
   </li>
-  <li class="break-words">
+  <li class="wrap-break-word">
     Introduction to SignalR by Microsoft - 
     <a href="https://learn.microsoft.com/en-us/aspnet/signalr/overview/getting-started/introduction-to-signalr" target="_blank">
       https://learn.microsoft.com/en-us/aspnet/signalr/overview/getting-started/introduction-to-signalr

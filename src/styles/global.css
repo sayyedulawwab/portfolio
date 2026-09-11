@@ -1,2 +1,87 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+/* ---------------------------------------------------------------
+   Tokens. Light is the default; dark follows the OS with no JS.
+   --------------------------------------------------------------- */
+@layer base {
+  :root {
+    --bg: #fbfbf9;
+    --surface: #f2f2ee;
+    --fg: #12161f;
+    --muted: #59616f;
+    --rule: #e2e2dd;
+    --accent: #2f4fd8;
+    --accent-soft: #e8ecfd;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e1116;
+      --surface: #161b23;
+      --fg: #e9eae7;
+      --muted: #99a1ad;
+      --rule: #232932;
+      --accent: #8ba4ff;
+      --accent-soft: #1a2138;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  /* One visible focus style everywhere. Never remove it. */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--accent-soft);
+    color: var(--fg);
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-mono:
+    ui-monospace, 'SF Mono', 'Cascadia Mono', 'JetBrains Mono', Menlo, Consolas,
+    monospace;
+}
+
+/* Article measure: keeps line length under ~75 characters. */
+@utility article {
+  max-width: 68ch;
+}

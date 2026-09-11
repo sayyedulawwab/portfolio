@@ -1,0 +1,48 @@
+---
+import { formatDate, isoDate, type Post } from '../lib/posts';
+
+interface Props {
+  posts: Post[];
+  /** h2 on the blog index, h3 when nested under a section heading. */
+  headingLevel?: 2 | 3;
+}
+
+const { posts, headingLevel = 2 } = Astro.props;
+const Heading = `h${headingLevel}` as 'h2' | 'h3';
+---
+
+<ul class="divide-y divide-rule border-y border-rule">
+  {
+    posts.map(post => (
+      <li>
+        <a
+          href={`/blog/${post.id}/`}
+          class="group py-5 grid gap-1 sm:grid-cols-[9rem_1fr] sm:gap-8"
+        >
+          <time
+            datetime={isoDate(post.data.publishedOn)}
+            class="text-sm text-muted tabular-nums sm:pt-0.5"
+          >
+            {formatDate(post.data.publishedOn)}
+          </time>
+
+          <div class="article">
+            <Heading class="font-medium group-hover:text-accent transition-colors text-balance">
+              {post.data.title}
+            </Heading>
+            <p class="mt-1 text-[15px] leading-relaxed text-muted">
+              {post.data.metaDescription}
+            </p>
+            {post.data.tags.length > 0 && (
+              <p class="mt-2 flex flex-wrap gap-x-3 text-xs text-muted">
+                {post.data.tags.map(tag => (
+                  <span>{tag}</span>
+                ))}
+              </p>
+            )}
+          </div>
+        </a>
+      </li>
+    ))
+  }
+</ul>

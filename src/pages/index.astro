@@ -1,32 +1,25 @@
 ---
-import Contact from '../components/Contact.tsx';
+import Capabilities from '../components/Capabilities.astro';
+import Contact from '../components/Contact.astro';
 import Experience from '../components/Experience.astro';
 import Hero from '../components/Hero.astro';
 import Projects from '../components/Projects.astro';
 import RecentArticles from '../components/RecentArticles.astro';
-import Skills from '../components/Skills.astro';
 import Testimonials from '../components/Testimonials.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title =
-  'Muhammad Sayyedul Awwab — Software Engineer | .NET Core | Talks about backend and software architecture';
-const author = 'Muhammad Sayyedul Awwab';
+  'Muhammad Sayyedul Awwab — Backend Software Engineer (.NET Core)';
 const description =
-  'Software Engineer passionate about building scalable, reliable, maintainable and performant systems using .NET Core. Talks about backend and software architecture.';
-const pageUrl = '';
+  'Backend software engineer in Dhaka building systems in .NET Core — APIs, SQL Server, CQRS, Clean Architecture and Domain-Driven Design — working toward software architecture and system design.';
 ---
 
-<BaseLayout
-  title={title}
-  author={author}
-  description={description}
-  pageUrl={pageUrl}
->
+<BaseLayout title={title} description={description} pageUrl="/">
   <Hero />
-  <Projects />
   <Experience />
-  <Skills />
+  <Capabilities />
+  <Projects />
   <RecentArticles />
   <Testimonials />
-  <Contact client:visible />
+  <Contact />
 </BaseLayout>

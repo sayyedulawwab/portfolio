@@ -1,110 +1,58 @@
 ---
-import { Image } from 'astro:assets';
 import { info } from '../data/info';
-import Icon from './Icon.astro';
-
-const startDate = new Date('2022-09-07'); // your start date
-const today = new Date();
-
-let years = today.getFullYear() - startDate.getFullYear();
-let months = today.getMonth() - startDate.getMonth();
-
-// Adjust if the current month/day hasn't passed the start month/day yet
-if (months < 0 || (months === 0 && today.getDate() < startDate.getDate())) {
-  years -= 1;
-  months += 12;
-}
-
-if (today.getDate() < startDate.getDate()) {
-  months -= 1;
-}
-
-const experienceString =
-  years > 0
-    ? months > 0
-      ? `${years} year${years > 1 ? 's' : ''} ${months} month${months > 1 ? 's' : ''}`
-      : `${years} year${years > 1 ? 's' : ''}`
-    : `${months} month${months > 1 ? 's' : ''}`;
 ---
 
-<section id="hero" class="min-h-screen flex items-center justify-between">
-  <div>
-    <Image
-      src={'/assets/images/propic.jpg'}
-      alt={'profile'}
-      width={200}
-      height={200}
-      class="w-32 aspect-square rounded-full object-cover"
-    />
-    <p>
-      <strong>Hi 👋 I'm</strong>
-    </p>
-    <h1 class="text-2xl font-bold">{info.name}</h1>
+<section class="pt-14 pb-20 sm:pt-20 sm:pb-24">
+  <div class="grid gap-8 sm:grid-cols-[1fr_auto] sm:gap-12 sm:items-start">
+    <div>
+      <h1
+        class="article text-[1.6rem] leading-tight sm:text-[2.1rem] sm:leading-[1.2] font-semibold tracking-tight text-balance"
+      >
+        Hi, I&rsquo;m {info.name}.
+      </h1>
 
-    <div class="py-4 text-gray-800">
-      <p class="mb-3">
-        <strong>Software Engineer</strong> with {experienceString} of experience
-        and passionate about building scalable, reliable, maintainable and performant
-        systems using <strong>
-          .NET Core, Clean Architecture, CQRS, Domain-Driven Design (DDD)
-        </strong>, etc.
-      </p>
-      <p>
-        Eager to excel in the software engineering track, I aspire to evolve
-        into a <strong>Software Architect</strong> role, guiding teams and crafting
-        robust, high-quality systems.
-      </p>
-      <p class="mt-3">
-        If you're a software engineer—whether just starting out or
-        experienced—or a hiring manager passionate about building great
-        systems, <strong>let's connect</strong> to share knowledge, exchange ideas,
-        and explore opportunities to collaborate.
+      <p class="mt-3 text-sm text-muted">
+        {info.role} &middot; {info.location}
       </p>
     </div>
-    <p class="flex gap-3 items-center">
-      <a
-        href={info.resume.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="bg-black text-white flex justify-between items-center gap-2 px-3 py-1 rounded-lg"
-      >
-        <span>Download Resume</span>
-        <Icon
-          class="text-white"
-          src={info.resume.logo}
-          alt="Resume | Sayyedul Awwab"
-        />
-      </a>
-      <a
-        href={info.socialMedia.github.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon
-          src={info.socialMedia.github.logo}
-          alt="GitHub | Sayyedul Awwab"
-        />
-      </a>
-      <a
-        href={info.socialMedia.linkedin.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon
-          src={info.socialMedia.linkedin.logo}
-          alt="LinkedIn | Sayyedul Awwab"
-        />
-      </a>
-      <a
-        href={info.socialMedia.medium.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Icon
-          src={info.socialMedia.medium.logo}
-          alt="Medium | Sayyedul Awwab"
-        />
-      </a>
-    </p>
+
+    <img
+      src="/assets/images/propic.jpg"
+      alt=""
+      width="160"
+      height="160"
+      fetchpriority="high"
+      decoding="async"
+      class="size-36 sm:size-40 rounded-full object-cover border border-rule order-first sm:order-0"
+    />
+  </div>
+
+  <div class="article mt-8 space-y-5 text-lg leading-relaxed">
+    <p>{info.positioning}</p>
+    <p class="text-muted">{info.direction}</p>
+    <p class="text-muted">{info.invitation}</p>
+  </div>
+
+  <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+    <a
+      href="#contact"
+      class="inline-flex items-center bg-fg text-bg px-5 py-2.5 font-medium hover:opacity-90 transition-opacity"
+    >
+      Say hello
+    </a>
+    <a
+      href="#experience"
+      class="underline underline-offset-4 hover:text-accent"
+    >
+      What I work on
+    </a>
+    <a
+      href={info.resume.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-muted underline underline-offset-4 hover:text-fg"
+    >
+      Résumé (PDF)
+    </a>
   </div>
 </section>
