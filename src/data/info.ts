@@ -71,7 +71,8 @@ export const info = {
       location: 'Dhaka, Bangladesh',
       startDate: '2024-10',
       endDate: '2025-07',
-      context: 'Distributed .NET Core systems built as microservices.',
+      context:
+        'A UK based e-commerce platform built across 30+ interconnected microservices.',
       highlights: [
         'Worked on .NET Core microservices using CQRS, Clean Architecture and Repository patterns, with messaging between services.',
         'Wrote automated tests and worked within an Azure DevOps delivery process.',
