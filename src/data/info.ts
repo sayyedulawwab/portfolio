@@ -102,7 +102,6 @@ export const info = {
         { name: 'C#, .NET Core' },
         { name: 'REST APIs' },
         { name: 'Clean Architecture' },
-        { name: 'Feature-oriented organisation' },
         { name: 'Vertical Slice Architecture' },
         { name: 'CQRS' },
         { name: 'Repository pattern' },
@@ -110,6 +109,9 @@ export const info = {
         { name: 'Domain-Driven Design' },
         { name: 'Modular Monolith' },
         { name: 'Unit Testing, Integration Testing' },
+        {
+          name: 'Observability, OpenTelemetry, Grafana, Loki, Prometheus, Tempo',
+        },
         { name: 'SignalR / WebSockets' },
       ],
     },
@@ -170,6 +172,7 @@ export const info = {
         'first-attempt-to-build-microservice-based-ecommerce-api-with-net-core-clean-architecture-and-ddd',
         'refactoring-the-e-commerce-microservice-project-introducing-a-shared-kernel-and-enhanced-error-handling',
         'leveraging-vertical-slice-architecture-with-clean-architecture-for-scalable-maintainable-systems',
+        'a-comprehensive-guide-to-designing-an-api-from-scratch-with-aspnet-core-and-clean-architecture-domain-driven-design-cqrs',
       ],
     },
     {
@@ -190,33 +193,6 @@ export const info = {
         'Docker',
       ],
       writeups: ['building-a-real-time-chat-service-with-net-core-and-signalr'],
-    },
-    {
-      title: 'E-commerce API (monolith)',
-      description:
-        'API for products, categories, authentication, reviews and orders. Built before the microservices version, using Clean Architecture, DDD and CQRS with the Repository pattern.',
-      githubUrl: 'https://github.com/sayyedulawwab/EcommerceApp',
-      liveUrl: '',
-      built_with: [
-        '.NET Core',
-        'Clean Architecture',
-        'DDD',
-        'CQRS',
-        'Redis',
-        'Docker',
-      ],
-      writeups: [
-        'a-comprehensive-guide-to-designing-an-api-from-scratch-with-aspnet-core-and-clean-architecture-domain-driven-design-cqrs',
-      ],
-    },
-    {
-      title: 'Job posting system, Bdjobs.com',
-      description:
-        'Contributed to migrating the Bdjobs employer panel job posting system from legacy technology to .NET Core and Angular. I built the API using .NET Core with a layered architecture and the Repository pattern.',
-      githubUrl: '',
-      liveUrl: 'https://recruiter.bdjobs.com/jobposting/job-information',
-      built_with: ['.NET Core', 'Layered architecture', 'Repository pattern'],
-      writeups: [],
     },
   ],
 
