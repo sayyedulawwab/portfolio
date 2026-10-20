@@ -26,7 +26,7 @@ const {
   title,
   description,
   pageUrl = '/',
-  image = '/og-image.png',
+  image = '/assets/images/portfolio.png',
   article,
   noindex = false,
 } = Astro.props;
@@ -135,8 +135,6 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
     {
       article && (
         <>
@@ -167,14 +165,13 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': graph };
             defer
             src={`https://www.googletagmanager.com/gtag/js?id=${site.analyticsId}`}
           />
-          <script is:inline define:vars={{ gaId: site.analyticsId }}>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', gaId);
-          </script>
+          {/* External file, not inline: the CSP in netlify.toml forbids inline scripts. */}
+          <script
+            is:inline
+            defer
+            src="/scripts/gtag-init.js"
+            data-ga-id={site.analyticsId}
+          />
         </>
       )
     }
