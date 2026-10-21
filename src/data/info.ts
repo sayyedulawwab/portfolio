@@ -61,8 +61,11 @@ export const info = {
       highlights: [
         'Backend engineering across modules covering employee profiles, permissions and authorization scopes, approval workflows, performance and KPI management, notifications, reporting, attendance, and payroll-related functionality.',
         'The difficulty here is business-rule complexity rather than raw traffic: enterprise rules that vary by department, hierarchy, role and document type, over operational data covering 25000+ employees.',
-        'Built in .NET Core with Clean Architecture, CQRS, feature-oriented organisation, Result pattern, DDD, FluentValidation, and Dapper over SQL Server.',
-        'Delivered through Azure DevOps and hosted on IIS.',
+        'Designed the approval engine behind several workflows: multi-step, parallel and dependency-based approvals, with approvers resolved at runtime and timeout handling.',
+        'Designed role-based access control for navigation, pages and UI elements, plus user-level data permission scopes based on organisational hierarchy and employee attributes.',
+        'Built a notification system for email and in-app (SignalR) messages on the Outbox pattern, for at-least-once delivery.',
+        "Built in .NET Core with Clean Architecture, CQRS, DDD and the Result pattern, using Dapper over SQL Server, delivered through Azure DevOps and hosted on IIS. I also review teammates' code across the backend modules.",
+        "Cut a .NET Web API's build pipeline from 8m 18s to 4m 39s and release time from 2m 12s to 51s, taking end-to-end merge and deployment from 10m 30s to 5m 30s.",
       ],
     },
     {
@@ -74,8 +77,8 @@ export const info = {
       context:
         'A UK based e-commerce platform built across 30+ interconnected microservices.',
       highlights: [
-        'Worked on .NET Core microservices using CQRS, Clean Architecture and Repository patterns, with messaging between services.',
-        'Wrote automated tests and worked within an Azure DevOps delivery process.',
+        'Worked on .NET Core microservices using CQRS, Clean Architecture and Repository patterns, with messaging between services over NServiceBus.',
+        "Wrote automated tests, reviewed teammates' code, and worked within an Azure DevOps delivery process.",
         'This is where I started treating service boundaries and integration as design problems in their own right — how services communicate, what that costs to deploy and operate, and what you give up when you split a system apart.',
       ],
     },
@@ -90,7 +93,9 @@ export const info = {
       highlights: [
         'Modernised legacy ASP Classic functionality into .NET Core Web APIs.',
         'Resolved 200+ production and application issues.',
+        "Owned the employer site's payment flows: job posting services, CV purchases, and SMS purchases.",
         'Built invoice automation that significantly reduced manual work.',
+        'Worked with frontend and QA teams through the migration, delivering features with 99% customer satisfaction.',
       ],
     },
   ],
@@ -108,7 +113,9 @@ export const info = {
         { name: 'Result pattern' },
         { name: 'Domain-Driven Design' },
         { name: 'Modular Monolith' },
-        { name: 'Unit Testing, Integration Testing' },
+        { name: 'Unit and integration testing (xUnit)' },
+        { name: 'FluentValidation' },
+        { name: 'Serilog' },
         {
           name: 'Observability, OpenTelemetry, Grafana, Loki, Prometheus, Tempo',
         },
@@ -120,6 +127,7 @@ export const info = {
       items: [
         { name: 'Relational data modelling' },
         { name: 'SQL Server' },
+        { name: 'PostgreSQL' },
         { name: 'EF Core, Dapper' },
         { name: 'MongoDB' },
         { name: 'Redis' },
@@ -130,8 +138,9 @@ export const info = {
       items: [
         { name: 'Microservices' },
         { name: 'Domain Events and Integration Events' },
-        { name: 'Messaging between services' },
         { name: 'RabbitMQ' },
+        { name: 'MassTransit' },
+        { name: 'NServiceBus' },
         { name: 'API gateway (Ocelot/YARP)' },
       ],
     },
@@ -141,6 +150,8 @@ export const info = {
         { name: 'Azure DevOps, CI/CD pipelines' },
         { name: 'IIS' },
         { name: 'Docker' },
+        { name: 'JIRA' },
+        { name: 'Git' },
       ],
     },
   ],
@@ -155,7 +166,7 @@ export const info = {
     {
       title: 'E-commerce Microservices',
       description:
-        'Catalog, Identity, Ordering, Cart and Payment services built with Clean Architecture, DDD and CQRS. RabbitMQ for inter-service communication and Ocelot as the API gateway. Later refactored to introduce a shared kernel with a consistent error-handling approach, and to organise each service around vertical slices.',
+        'Five services — Catalog, Identity, Ordering, Cart and a simulated Payment processor — behind a YARP gateway. Placing an order runs as an event-driven flow: Catalog reserves stock, Payment charges, and the order moves to Paid or Cancelled, with a transactional outbox so events are not lost. It started on Ocelot, and was later refactored around a shared kernel with consistent error handling and vertical slices.',
       githubUrl: 'https://github.com/sayyedulawwab/EcommerceMicroservices',
       liveUrl: '',
       built_with: [
@@ -164,8 +175,12 @@ export const info = {
         'DDD',
         'CQRS',
         'RabbitMQ',
+        'MassTransit',
+        'YARP',
+        'SQL Server',
         'Redis',
         'Docker',
+        'OpenTelemetry',
       ],
       /** Slugs of articles where I wrote up the decisions behind this project. */
       writeups: [
@@ -185,12 +200,10 @@ export const info = {
         '.NET Core',
         'SignalR',
         'Clean Architecture',
-        'DDD',
         'CQRS',
         'SQL Server',
         'MongoDB',
         'Redis',
-        'Docker',
       ],
       writeups: ['building-a-real-time-chat-service-with-net-core-and-signalr'],
     },
