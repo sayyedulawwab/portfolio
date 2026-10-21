@@ -186,7 +186,6 @@ export const info = {
       writeups: [
         'first-attempt-to-build-microservice-based-ecommerce-api-with-net-core-clean-architecture-and-ddd',
         'refactoring-the-e-commerce-microservice-project-introducing-a-shared-kernel-and-enhanced-error-handling',
-        'leveraging-vertical-slice-architecture-with-clean-architecture-for-scalable-maintainable-systems',
         'a-comprehensive-guide-to-designing-an-api-from-scratch-with-aspnet-core-and-clean-architecture-domain-driven-design-cqrs',
       ],
     },
