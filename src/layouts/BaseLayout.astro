@@ -46,14 +46,7 @@ const person = {
   description: info.positioning,
   knowsAbout: [
     'Backend engineering',
-    '.NET Core',
-    'C#',
-    'REST APIs',
-    'SQL Server',
-    'Clean Architecture',
-    'CQRS',
-    'Domain-Driven Design',
-    'Microservices',
+    ...info.capabilities.flatMap(group => group.items.map(item => item.name)),
   ],
   sameAs: [
     info.socialMedia.github.url,
